@@ -5,3 +5,23 @@ header .user-session {
 header .user-session img + img {
   margin-left: 10px;
 }
+
+.search-area {
+  display: flex;
+  background: #beb9b9;
+  height: 38px;
+  padding: 0 !important;
+}
+
+.search-area p {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.search-area img {
+  position: absolute;
+  right: 20px;
+  align-self: center;
+}
