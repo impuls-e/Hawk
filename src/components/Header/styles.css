@@ -1,1 +1,7 @@
+header .user-session {
+  align-self: center;
+}
 
+header .user-session img + img {
+  margin-left: 10px;
+}

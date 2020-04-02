@@ -3,6 +3,12 @@
 
 body {
   font-family: 'Archivo', sans-serif;
+  padding: 0 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {

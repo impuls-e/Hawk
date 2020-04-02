@@ -10,8 +10,10 @@ const Header = ({ siteTitle }) => (
   <header>
     <img src={menuIcon} alt="Hawk menu" />
     <img src={hawkLogo} alt="Hawk logo" />
-    <img src={profileIcon} alt="Hawk profile" />
-    <img src={cartIcon} alt="Hawk cart" />
+    <div className="user-session">
+      <img src={profileIcon} alt="Hawk profile" />
+      <img src={cartIcon} alt="Hawk cart" />
+    </div>
   </header>
 );
 
