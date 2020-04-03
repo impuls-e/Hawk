@@ -4,7 +4,8 @@
   outline: none;
 }
 
-.header-mobile .user-session {
+.header-mobile .user-session,
+.header-desktop .user-session {
   align-self: center;
 }
 
