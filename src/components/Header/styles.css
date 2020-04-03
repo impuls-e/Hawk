@@ -1,8 +1,14 @@
-header .user-session {
+.header-mobile button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.header-mobile .user-session {
   align-self: center;
 }
 
-header .user-session img + img {
+.header-mobile .user-session img + img {
   margin-left: 10px;
 }
 

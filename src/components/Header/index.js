@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { isMobile } from 'react-device-detect';
 import './styles.css';
@@ -10,8 +10,8 @@ import cartIcon from '../../images/cartIcon.svg';
 import searchIcon from '../../images/searchIcon.svg';
 
 export default function Header() {
-  const state = {
-    navbarOpen: false,
+  const [ menu, setMenu ] = useState({
+    mobileNavbarOpen: false,
     links: [
       {
         id: 1,
@@ -34,13 +34,25 @@ export default function Header() {
         text: 'acessórios'
       }
     ]
-  };
+  });
+
+  /* state of the sidebarmenu for mobile approach*/
+  function handlerMobileNavbarOpen() {
+    menu.mobileNavbarOpen
+      ? setMenu({ ...menu, mobileNavbarOpen: false })
+      : setMenu({
+          ...menu,
+          mobileNavbarOpen: true
+        });
+  }
 
   if (isMobile) {
     return (
       <React.Fragment>
         <header className="header-mobile">
-          <img src={menuIcon} alt="Hawk menu" />
+          <button onClick={handlerMobileNavbarOpen}>
+            <img src={menuIcon} alt="Hawk menu" />
+          </button>
           <img src={hawkLogo} alt="Hawk logo" />
           <div className="user-session">
             <img src={profileIcon} alt="Hawk profile" />
@@ -58,7 +70,7 @@ export default function Header() {
     <header className="header-desktop">
       <img src={hawkLogo} alt="Hawk logo" />
       <ul>
-        {state.links.map((link) => (
+        {menu.links.map((link) => (
           <li key={link.id}>
             <Link to={link.path} className="">
               {link.text}
