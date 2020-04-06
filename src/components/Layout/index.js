@@ -1,8 +1,8 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Header from '../Header/header';
-import './layout.css';
+import Header from "../Header/header"
+import "./styles.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -13,14 +13,14 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <React.Fragment>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

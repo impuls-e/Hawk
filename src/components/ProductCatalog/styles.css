@@ -1,0 +1,26 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 2vw;
+}
+.catalog h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2vh;
+}
+.catalog .options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+.catalog .options h4 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 7px;
+  letter-spacing: -1px;
+}
+.catalog .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
