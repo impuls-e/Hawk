@@ -1,4 +1,4 @@
-.menu-toggle {
+header .header-menu .menu-section .menu-toggle {
   min-width: 40px;
   width: 40px;
   height: 100%;
@@ -102,8 +102,6 @@
   font-size: 18px;
 }
 
-/* */
-
 .header-menu button {
   background: none;
   border: none;
@@ -149,7 +147,23 @@
 }
 
 @media (min-width: 880px) {
-  .menu-toggle {
+  header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + main {
+    padding-top: 80px;
+  }
+
+  header .header-menu .menu-section {
     display: none;
   }
   .header-menu {

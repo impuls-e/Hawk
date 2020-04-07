@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import './styles.css';
 
-import menuIcon from '../../images/menuIcon.svg';
+import Hero from '../Hero/';
 import hawkLogo from '../../images/hawkIcon.svg';
 import profileIcon from '../../images/profileIcon.svg';
 import cartIcon from '../../images/cartIcon.svg';
 import searchIcon from '../../images/searchIcon.svg';
 
-export default function Header() {
+export default function Header({ siteTitle }) {
   const [ classOn, setClassOn ] = useState('');
   const [ show, setShow ] = useState(false);
   const [ menu, setMenu ] = useState({
@@ -79,10 +79,12 @@ export default function Header() {
           </div>
         </div>
       </header>
+      <div />
       <div className="search-area">
         <p>O que você procura ?</p>
         <img src={searchIcon} alt="Hawk search" />
       </div>
+      <Hero />
     </React.Fragment>
   );
 }
