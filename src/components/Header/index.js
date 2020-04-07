@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { isMobile } from 'react-device-detect';
 import './styles.css';
 
 import menuIcon from '../../images/menuIcon.svg';
@@ -10,8 +9,9 @@ import cartIcon from '../../images/cartIcon.svg';
 import searchIcon from '../../images/searchIcon.svg';
 
 export default function Header() {
+  const [ classOn, setClassOn ] = useState('');
+  const [ show, setShow ] = useState(false);
   const [ menu, setMenu ] = useState({
-    mobileNavbarOpen: false,
     links: [
       {
         id: 1,
@@ -36,53 +36,53 @@ export default function Header() {
     ]
   });
 
-  /* state of the sidebarmenu for mobile approach*/
-  function handlerMobileNavbarOpen() {
-    menu.mobileNavbarOpen
-      ? setMenu({ ...menu, mobileNavbarOpen: false })
-      : setMenu({
-          ...menu,
-          mobileNavbarOpen: true
-        });
+  function handleMenu() {
+    document.body.style.overflow = show ? 'initial' : 'hidden';
+    show ? setClassOn('') : setClassOn('on');
+    setShow(!show);
+    // setMenu(...menu, (tempMenu.mobileNavbarOpen: true));
   }
 
-  if (isMobile) {
-    return (
-      <React.Fragment>
-        <header className="header-mobile">
-          <button onClick={handlerMobileNavbarOpen}>
+  return (
+    <React.Fragment>
+      <header className="">
+        <div className="header-menu">
+          <div className={`menu-section ${classOn}`}>
+            {/* <button>
             <img src={menuIcon} alt="Hawk menu" />
-          </button>
+          </button> */}
+            <div onClick={handleMenu} className="menu-toggle">
+              <div className="one" />
+              <div className="two" />
+              <div className="three" />
+            </div>
+          </div>
+
           <img src={hawkLogo} alt="Hawk logo" />
+
+          <nav>
+            <ul>
+              {menu.links.map((link) => (
+                <li key={link.id}>
+                  <Link to={link.path} className="">
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="user-session">
+            <img className="searchIcon" src={searchIcon} alt="Hawk search" />
             <img src={profileIcon} alt="Hawk profile" />
             <img src={cartIcon} alt="Hawk cart" />
           </div>
-        </header>
-        <div className="search-area">
-          <p>O que você procura ?</p>
-          <img src={searchIcon} alt="Hawk search" />
         </div>
-      </React.Fragment>
-    );
-  }
-  return (
-    <header className="header-desktop">
-      <img src={hawkLogo} alt="Hawk logo" />
-      <ul>
-        {menu.links.map((link) => (
-          <li key={link.id}>
-            <Link to={link.path} className="">
-              {link.text}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <div className="user-session">
+      </header>
+      <div className="search-area">
+        <p>O que você procura ?</p>
         <img src={searchIcon} alt="Hawk search" />
-        <img src={profileIcon} alt="Hawk profile" />
-        <img src={cartIcon} alt="Hawk cart" />
       </div>
-    </header>
+    </React.Fragment>
   );
 }
