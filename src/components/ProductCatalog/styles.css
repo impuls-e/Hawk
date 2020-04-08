@@ -13,14 +13,26 @@
   justify-content: center;
   margin-bottom: 2vh;
 }
-.catalog .options h4 {
+.catalog .options a {
   text-align: center;
   text-transform: uppercase;
-  padding: 0 7px;
+  padding: 2.2vh 2vw;
+  font-size: 2rem;
   letter-spacing: -1px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.catalog .options .active {
+  background-color: #000;
+  color: #fff;
 }
 .catalog .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.catalog .products::after {
+  content: "";
+  flex: auto;
 }
