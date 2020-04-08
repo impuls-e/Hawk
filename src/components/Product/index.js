@@ -3,13 +3,70 @@ import "./styles.css"
 
 import Img from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
-export default function Product() {
+export default function Product({ product }) {
   const generateKey = pre => {
     return `${pre}_${new Date().getTime()}`
   }
+
   const data = useStaticQuery(graphql`
     query productQuery {
-      allMdx(filter: { frontmatter: { tag: { eq: "tshirt" } } }) {
+      tshirt: allMdx(filter: { frontmatter: { tag: { eq: "tshirt" } } }) {
+        edges {
+          node {
+            frontmatter {
+              description
+              title
+              value
+              imgUrl {
+                childImageSharp {
+                  fluid(maxHeight: 270) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      pants: allMdx(filter: { frontmatter: { tag: { eq: "pants" } } }) {
+        edges {
+          node {
+            frontmatter {
+              description
+              title
+              value
+              imgUrl {
+                childImageSharp {
+                  fluid(maxHeight: 270) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      short: allMdx(filter: { frontmatter: { tag: { eq: "short" } } }) {
+        edges {
+          node {
+            frontmatter {
+              description
+              title
+              value
+              imgUrl {
+                childImageSharp {
+                  fluid(maxHeight: 270) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      accessories: allMdx(
+        filter: { frontmatter: { tag: { eq: "accessories" } } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -29,7 +86,7 @@ export default function Product() {
       }
     }
   `)
-  const products = data.allMdx.edges
+  const products = data[product].edges
 
   return products.map(product => (
     <div
