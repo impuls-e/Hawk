@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 
 import Hero from '../Hero/';
@@ -11,7 +11,7 @@ import searchIcon from '../../images/searchIcon.svg';
 export default function Header({ siteTitle }) {
   const [ classOn, setClassOn ] = useState('');
   const [ show, setShow ] = useState(false);
-  const [ menu, setMenu ] = useState({
+  const menu = {
     links: [
       {
         id: 1,
@@ -34,23 +34,19 @@ export default function Header({ siteTitle }) {
         text: 'acessórios'
       }
     ]
-  });
+  };
 
   function handleMenu() {
     document.body.style.overflow = show ? 'initial' : 'hidden';
     show ? setClassOn('') : setClassOn('on');
     setShow(!show);
-    // setMenu(...menu, (tempMenu.mobileNavbarOpen: true));
   }
 
   return (
     <React.Fragment>
-      <header className="">
+      <header>
         <div className="header-menu">
           <div className={`menu-section ${classOn}`}>
-            {/* <button>
-            <img src={menuIcon} alt="Hawk menu" />
-          </button> */}
             <div onClick={handleMenu} className="menu-toggle">
               <div className="one" />
               <div className="two" />
@@ -78,12 +74,13 @@ export default function Header({ siteTitle }) {
             <img src={cartIcon} alt="Hawk cart" />
           </div>
         </div>
+        <div className="search-area">
+          <p>O que você procura ?</p>
+          <img src={searchIcon} alt="Hawk search" />
+        </div>
       </header>
       <div />
-      <div className="search-area">
-        <p>O que você procura ?</p>
-        <img src={searchIcon} alt="Hawk search" />
-      </div>
+
       <Hero />
     </React.Fragment>
   );

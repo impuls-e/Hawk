@@ -1,3 +1,17 @@
+header {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+header .header-menu {
+  height: 60px;
+  display: flex;
+  padding: 0 2vw;
+  justify-content: space-between;
+}
+
 header .header-menu .menu-section .menu-toggle {
   min-width: 40px;
   width: 40px;
@@ -8,13 +22,14 @@ header .header-menu .menu-section .menu-toggle {
   justify-content: center;
 }
 
-.one,
-.two,
-.three {
+/* Hamburger menu */
+header .header-menu .menu-section .menu-toggle .one,
+header .header-menu .menu-section .menu-toggle .two,
+header .header-menu .menu-section .menu-toggle .three {
   transition-duration: 0.3s;
 }
 
-.one {
+header .header-menu .menu-section .menu-toggle .one {
   background-color: #333333;
   height: 5px;
   width: 100%;
@@ -22,7 +37,7 @@ header .header-menu .menu-section .menu-toggle {
   text-align: left;
 }
 
-.two {
+header .header-menu .menu-section .menu-toggle .two {
   background-color: #333333;
   height: 5px;
   width: 70%;
@@ -30,7 +45,7 @@ header .header-menu .menu-section .menu-toggle {
   text-align: left;
 }
 
-.three {
+header .header-menu .menu-section .menu-toggle .three {
   background-color: #333333;
   height: 5px;
   width: 40%;
@@ -38,14 +53,9 @@ header .header-menu .menu-section .menu-toggle {
   text-align: left;
 }
 
-.header-menu {
-  height: 60px;
-  display: flex;
-  padding: 0 2vw;
-  justify-content: space-between;
-}
+/* Fim do hamburger */
 
-.menu-section.on {
+header .header-menu .menu-section.on {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,41 +68,41 @@ header .header-menu .menu-section .menu-toggle {
   align-items: center;
 }
 
-.menu-section.on .menu-toggle {
+header .header-menu .menu-section.on .menu-toggle {
   position: absolute;
   left: 15px;
   top: 15px;
-  justify-content: normal;
+  justify-content: normal !important;
 }
 
-.menu-section.on .menu-toggle .one {
+header .header-menu .menu-section.on .menu-toggle .one {
   transform: rotate(45deg) translate(7px, 7px);
   width: 70%;
 }
 
-.menu-section.on .menu-toggle .two {
+header .header-menu .menu-section.on .menu-toggle .two {
   opacity: 0;
 }
 
-.menu-section.on .menu-toggle .three {
+header .header-menu .menu-section.on .menu-toggle .three {
   transform: rotate(-45deg) translate(8px, -9px);
   width: 70%;
 }
 
-.menu-section.on ~ nav {
+header .header-menu .menu-section.on ~ nav {
   display: block;
   z-index: 11;
   margin-top: 20vh;
 }
 
-.menu-section.on ~ nav,
-.menu-section.on ~ nav ul {
+header .header-menu .menu-section.on ~ nav,
+header .header-menu .menu-section.on ~ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.menu-section.on ~ nav ul li a {
+header .header-menu .menu-section.on ~ nav ul li a {
   transition-duration: 0.3s;
   line-height: 70px;
   text-decoration: none;
@@ -102,37 +112,36 @@ header .header-menu .menu-section .menu-toggle {
   font-size: 18px;
 }
 
-.header-menu button {
+header .header-menu button {
   background: none;
   border: none;
   outline: none;
 }
 
-.header-menu nav {
+header .header-menu nav {
   display: none;
 }
 
-.header-menu .user-session,
-.header-desktop .user-session {
+header .header-menu .user-session {
   align-self: center;
 }
 
-.header-menu .user-session .searchIcon {
+header .header-menu .user-session .searchIcon {
   display: none;
 }
 
-.header-menu .user-session img + img {
+header .header-menu .user-session img + img {
   margin-left: 10px;
 }
 
-.search-area {
+header .search-area {
   display: flex;
   background: #beb9b9;
   height: 38px;
   padding: 0 !important;
 }
 
-.search-area p {
+header .search-area p {
   align-self: center;
   width: 100%;
   text-align: center;
@@ -140,7 +149,7 @@ header .header-menu .menu-section .menu-toggle {
   color: #000000;
 }
 
-.search-area img {
+header .search-area img {
   position: absolute;
   right: 20px;
   align-self: center;
@@ -148,25 +157,12 @@ header .header-menu .menu-section .menu-toggle {
 
 @media (min-width: 880px) {
   header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 1;
   }
 
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  .sticky + main {
-    padding-top: 80px;
-  }
-
-  header .header-menu .menu-section {
-    display: none;
-  }
-  .header-menu {
+  header .header-menu {
     display: flex;
     height: 80px;
     background: rgba(196, 196, 196, .19);
@@ -174,17 +170,21 @@ header .header-menu .menu-section .menu-toggle {
     justify-content: space-between;
   }
 
-  .header-menu button {
+  header .header-menu .menu-section {
     display: none;
   }
 
-  .header-menu nav,
-  .header-menu nav ul {
+  header.header-menu button {
+    display: none;
+  }
+
+  header .header-menu nav,
+  header .header-menu nav ul {
     display: flex;
     align-items: center;
   }
 
-  .header-menu nav ul li a {
+  header .header-menu nav ul li a {
     text-decoration: none;
     color: #000000;
     padding: 0 30px;
@@ -192,15 +192,15 @@ header .header-menu .menu-section .menu-toggle {
     font-size: 18px;
   }
 
-  .header-menu .user-session .searchIcon {
+  header .header-menu .user-session .searchIcon {
     display: inline;
   }
 
-  .header-menu .user-session img + img {
+  header .header-menu .user-session img + img {
     margin-left: 15px;
   }
 
-  .search-area {
+  header .search-area {
     display: none;
   }
 }
