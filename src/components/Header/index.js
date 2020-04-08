@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import React, { useState } from 'react';
 import './styles.css';
 
-import menuIcon from '../../images/menuIcon.svg';
+import Hero from '../Hero/';
 import hawkLogo from '../../images/hawkIcon.svg';
 import profileIcon from '../../images/profileIcon.svg';
 import cartIcon from '../../images/cartIcon.svg';
 import searchIcon from '../../images/searchIcon.svg';
 
-export default function Header() {
+export default function Header({ siteTitle }) {
   const [ classOn, setClassOn ] = useState('');
   const [ show, setShow ] = useState(false);
-  const [ menu, setMenu ] = useState({
+  const menu = {
     links: [
       {
         id: 1,
@@ -34,23 +34,19 @@ export default function Header() {
         text: 'acessórios'
       }
     ]
-  });
+  };
 
   function handleMenu() {
     document.body.style.overflow = show ? 'initial' : 'hidden';
     show ? setClassOn('') : setClassOn('on');
     setShow(!show);
-    // setMenu(...menu, (tempMenu.mobileNavbarOpen: true));
   }
 
   return (
     <React.Fragment>
-      <header className="">
+      <header>
         <div className="header-menu">
           <div className={`menu-section ${classOn}`}>
-            {/* <button>
-            <img src={menuIcon} alt="Hawk menu" />
-          </button> */}
             <div onClick={handleMenu} className="menu-toggle">
               <div className="one" />
               <div className="two" />
@@ -78,11 +74,14 @@ export default function Header() {
             <img src={cartIcon} alt="Hawk cart" />
           </div>
         </div>
+        <div className="search-area">
+          <p>O que você procura ?</p>
+          <img src={searchIcon} alt="Hawk search" />
+        </div>
       </header>
-      <div className="search-area">
-        <p>O que você procura ?</p>
-        <img src={searchIcon} alt="Hawk search" />
-      </div>
+      <div />
+
+      <Hero />
     </React.Fragment>
   );
 }
