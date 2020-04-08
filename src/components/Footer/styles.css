@@ -36,6 +36,9 @@ footer .wrap-footer .contact div svg + svg {
 }
 
 @media (min-width: 768px) {
+  footer {
+    height: 40vh;
+  }
   footer .wrap-footer {
     display: flex !important;
     flex-direction: row;
