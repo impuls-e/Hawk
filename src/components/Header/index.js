@@ -1,14 +1,13 @@
-
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import "./styles.css"
 
-import hawkLogo from "../../images/hawkIcon.svg"
-import profileIcon from "../../images/profileIcon.svg"
-import cartIcon from "../../images/cartIcon.svg"
-import searchIcon from "../../images/searchIcon.svg"
-
-export default function Header({ headerLogo, profileIcon, cartIcon, searchIcon }) {
+export default function Header({
+  headerLogo,
+  profileIcon,
+  cartIcon,
+  searchIcon,
+}) {
   const [classOn, setClassOn] = useState("")
   const [show, setShow] = useState(false)
   const menu = {

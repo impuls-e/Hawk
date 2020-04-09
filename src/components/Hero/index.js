@@ -21,7 +21,9 @@ export default function Hero() {
           }
         }
       }
+    }
   `)
+
   const sources = [
     {
       ...data.heroMobile.childImageSharp.fluid,
@@ -32,7 +34,6 @@ export default function Hero() {
       media: `(min-width:400px)`,
     },
   ]
-
   return (
     <div className="hero">
       <BackgroundImage

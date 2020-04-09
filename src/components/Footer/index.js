@@ -1,7 +1,7 @@
-import React from 'react';
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
-import { MdMailOutline } from 'react-icons/md';
-import './styles.css';
+import React from "react"
+import { FaWhatsapp, FaInstagram } from "react-icons/fa"
+import { MdMailOutline } from "react-icons/md"
+import "./styles.css"
 
 export default function Footer({ footerLogo, paymentImage }) {
   return (
@@ -29,5 +29,5 @@ export default function Footer({ footerLogo, paymentImage }) {
         </div>
       </div>
     </footer>
-  );
+  )
 }
