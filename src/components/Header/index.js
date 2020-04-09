@@ -1,3 +1,4 @@
+
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import "./styles.css"
@@ -7,7 +8,7 @@ import profileIcon from "../../images/profileIcon.svg"
 import cartIcon from "../../images/cartIcon.svg"
 import searchIcon from "../../images/searchIcon.svg"
 
-export default function Header() {
+export default function Header({ headerLogo, profileIcon, cartIcon, searchIcon }) {
   const [classOn, setClassOn] = useState("")
   const [show, setShow] = useState(false)
   const menu = {
@@ -53,7 +54,7 @@ export default function Header() {
             </div>
           </div>
 
-          <img src={hawkLogo} alt="Hawk logo" />
+          <img src={headerLogo} alt="Hawk logo" />
 
           <nav>
             <ul>

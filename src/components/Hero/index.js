@@ -21,9 +21,7 @@ export default function Hero() {
           }
         }
       }
-    }
   `)
-
   const sources = [
     {
       ...data.heroMobile.childImageSharp.fluid,
