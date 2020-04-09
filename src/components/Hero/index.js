@@ -1,8 +1,8 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
-import './styles.css';
+import "./styles.css"
 
 export default function Hero() {
   const data = useStaticQuery(graphql`
@@ -22,22 +22,27 @@ export default function Hero() {
         }
       }
     }
-  `);
+  `)
 
   const sources = [
     {
       ...data.heroMobile.childImageSharp.fluid,
-      media: `(max-width: 399px)`
+      media: `(max-width: 399px)`,
     },
     {
       ...data.heroDesktop.childImageSharp.fluid,
-      media: `(min-width:400px)`
-    }
-  ];
+      media: `(min-width:400px)`,
+    },
+  ]
 
   return (
     <div className="hero">
-      <Img fluid={sources} />
+      <BackgroundImage
+        Tag="section"
+        className="background"
+        fluid={sources}
+        backgroundColor={`#040e18`}
+      />
     </div>
-  );
+  )
 }

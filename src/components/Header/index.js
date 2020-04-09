@@ -7,7 +7,7 @@ import profileIcon from "../../images/profileIcon.svg"
 import cartIcon from "../../images/cartIcon.svg"
 import searchIcon from "../../images/searchIcon.svg"
 
-export default function Header({ siteTitle }) {
+export default function Header() {
   const [classOn, setClassOn] = useState("")
   const [show, setShow] = useState(false)
   const menu = {
@@ -78,7 +78,6 @@ export default function Header({ siteTitle }) {
           <img src={searchIcon} alt="Hawk search" />
         </div>
       </header>
-      <div />
     </React.Fragment>
   )
 }

@@ -1,5 +1,13 @@
 .hero {
+  height: 85vh;
   padding-top: 98px;
+}
+.background {
+  width: 100%;
+  background-position: bottom center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  position: initial !important;
 }
 @media (min-width: 880px) {
   .hero {
