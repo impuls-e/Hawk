@@ -1,5 +1,4 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react"
 
 import headerLogo from '../../images/hawkIcon.svg';
 import profileIcon from '../../images/profileIcon.svg';
@@ -12,19 +11,9 @@ import paymentImage from '../../images/payment.svg';
 import Header from '../Header/';
 import Footer from '../Footer/';
 
-import './styles.css';
+import "./styles.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <React.Fragment>
       <Header
@@ -37,7 +26,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Footer footerLogo={footerLogo} paymentImage={paymentImage} />
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

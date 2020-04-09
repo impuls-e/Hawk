@@ -3,12 +3,15 @@ import React from "react"
 import Layout from "../components/Layout/"
 import SEO from "../components/Seo"
 import ProductCatalog from "../components/ProductCatalog"
+import Hero from "../components/Hero"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <ProductCatalog />
-  </Layout>
-)
+export default function IndexPage() {
+  return (
+    <Layout>
+      <SEO title="Home" />
 
-export default IndexPage
+      <Hero />
+      <ProductCatalog />
+    </Layout>
+  )
+}

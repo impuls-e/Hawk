@@ -1,6 +1,10 @@
 .hero {
   padding-top: 98px;
 }
+.hero .background {
+  width: 100%;
+  height: 85vh;
+}
 @media (min-width: 880px) {
   .hero {
     padding-top: 80px;

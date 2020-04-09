@@ -1,40 +1,45 @@
-import { Link } from 'gatsby';
-import React, { useState } from 'react';
-import Hero from '../Hero/';
-import './styles.css';
+
+import { Link } from "gatsby"
+import React, { useState } from "react"
+import "./styles.css"
+
+import hawkLogo from "../../images/hawkIcon.svg"
+import profileIcon from "../../images/profileIcon.svg"
+import cartIcon from "../../images/cartIcon.svg"
+import searchIcon from "../../images/searchIcon.svg"
 
 export default function Header({ headerLogo, profileIcon, cartIcon, searchIcon }) {
-  const [ classOn, setClassOn ] = useState('');
-  const [ show, setShow ] = useState(false);
+  const [classOn, setClassOn] = useState("")
+  const [show, setShow] = useState(false)
   const menu = {
     links: [
       {
         id: 1,
-        path: '/camisetas',
-        text: 'camisetas'
+        path: "/camisetas",
+        text: "camisetas",
       },
       {
         id: 2,
-        path: '/shorts',
-        text: 'shorts'
+        path: "/shorts",
+        text: "shorts",
       },
       {
         id: 3,
-        path: '/calças',
-        text: 'calças'
+        path: "/calças",
+        text: "calças",
       },
       {
         id: 4,
-        path: '/acessorios',
-        text: 'acessórios'
-      }
-    ]
-  };
+        path: "/acessorios",
+        text: "acessórios",
+      },
+    ],
+  }
 
   function handleMenu() {
-    document.body.style.overflow = show ? 'initial' : 'hidden';
-    show ? setClassOn('') : setClassOn('on');
-    setShow(!show);
+    document.body.style.overflow = show ? "initial" : "hidden"
+    show ? setClassOn("") : setClassOn("on")
+    setShow(!show)
   }
 
   return (
@@ -53,7 +58,7 @@ export default function Header({ headerLogo, profileIcon, cartIcon, searchIcon }
 
           <nav>
             <ul>
-              {menu.links.map((link) => (
+              {menu.links.map(link => (
                 <li key={link.id}>
                   <Link to={link.path} className="">
                     {link.text}
@@ -74,9 +79,6 @@ export default function Header({ headerLogo, profileIcon, cartIcon, searchIcon }
           <img src={searchIcon} alt="Hawk search" />
         </div>
       </header>
-      <div />
-
-      <Hero />
     </React.Fragment>
-  );
+  )
 }
