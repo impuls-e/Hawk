@@ -8,14 +8,14 @@
 
 > Todas as informações são baseadas na tela **Mobile** e foram tiradas do site [PageSpeedInsights](https://developers.google.com/speed/pagespeed/insights/) > - By Google
 
-- A nota da página foi de **99** pontos.
-- O tempo que o primeiro conteúdo é desenhado na tela foi de **1.9s**.
-- O índice de velocidade foi de **1.9s**.
-- O tempo que a página leva para ficar completamente interativa foi de **2.8s**. 
+- A nota da página foi de **91** pontos.
+- O tempo que o primeiro conteúdo é desenhado na tela foi de **2.4 s**.
+- O índice de velocidade foi de **3.2 s**.
+- O tempo que a página leva para ficar completamente interativa foi de **3.7 s**.
 
 Print
 
-PageSpeedTest BazarDasChaves                                         |  
+PageSpeedTest Hawk                                         |  
 :-----------------------------------------------------------:|
 <img src="./src/img/pageSpeedTest.png" align="center"/>   | 
 
