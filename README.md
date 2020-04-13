@@ -6,6 +6,8 @@
 
 ## Solução
 
+Site desenvolvido com o framework Gatsby. Segue abaixo algumas informações sobre o resultado.
+
 > Todas as informações são baseadas na tela **Mobile** e foram tiradas do site [PageSpeedInsights](https://developers.google.com/speed/pagespeed/insights/) > - By Google
 
 - A nota da página foi de **91** pontos.
