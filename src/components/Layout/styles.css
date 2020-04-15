@@ -1,6 +1,8 @@
 @import "./reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&display=swap");
-
+@font-face {
+  font-family: "Archivo-Regular";
+  src: url("../../fonts/Archivo-Regular.ttf");
+}
 body,
 button {
   font-family: "Archivo", sans-serif;
