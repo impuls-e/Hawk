@@ -35,7 +35,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // The product "title" is generated automatically by Shopify
   result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
-      path: `/product/${node.frontmatter.handle}`,
+      path: `/produto/${node.frontmatter.handle}`,
       component: path.resolve(`./src/templates/product.js`),
       context: {
         product: node.frontmatter,
