@@ -9,6 +9,7 @@ import footerLogo from "../../images/footerLogo.svg"
 import paymentImage from "../../images/payment.svg"
 
 import Header from "../Header/"
+import Newsletter from "../Newsletter"
 import Footer from "../Footer/"
 
 import "./styles.css"
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
         searchIcon={searchIcon}
       />
       <main>{children}</main>
+      <Newsletter />
       <Footer footerLogo={footerLogo} paymentImage={paymentImage} />
     </React.Fragment>
   )

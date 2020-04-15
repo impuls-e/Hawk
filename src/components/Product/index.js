@@ -17,6 +17,7 @@ export default function Product({ product }) {
               description
               title
               value
+              handle
               imgUrl {
                 childImageSharp {
                   fluid(maxHeight: 270) {
@@ -102,7 +103,9 @@ export default function Product({ product }) {
           <h4>{product.node.frontmatter.title}</h4>
           <p>R$ {product.node.frontmatter.value},00</p>
         </div>
-        <Link to="/">Ver Produto</Link>
+        <Link to={`/product/${product.node.frontmatter.handle}`}>
+          Ver Produto
+        </Link>
       </div>
     </div>
   ))
