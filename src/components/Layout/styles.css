@@ -35,17 +35,26 @@ button {
   padding: 0;
 }
 
-.section {
-  padding: 98px 2vw 0 2vw;
+.header-offset {
+  padding-top: 98px;
 }
+
+section {
+  padding: 0 2vw;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 13px;
   }
+
+  section {
+    padding: 0 2vw;
+  }
 }
 @media (min-width: 880px) {
-  .section {
-    padding: 80px 2vw 0 2vw;
+  .header-offset {
+    padding-top: 80px;
   }
 }
 

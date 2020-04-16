@@ -1,4 +1,4 @@
-.section > h2 {
+.product-catalog > h2 {
   text-align: center;
   margin: 30px 0;
 }
@@ -12,4 +12,16 @@
 
 .product-catalog div .product-item {
   width: 100%;
+}
+
+@media (min-width: 600px) {
+  .product-catalog > div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-catalog > div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
