@@ -155,6 +155,10 @@ header .search-area img {
   align-self: center;
 }
 
+header .header-menu .header-logo {
+  display: flex;
+}
+
 @media (min-width: 880px) {
   header {
     position: fixed;

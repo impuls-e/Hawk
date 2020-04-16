@@ -7,7 +7,7 @@ export default function Camisetas() {
   return (
     <Layout>
       <SEO title="Camisetas" />
-      <SingleCategory />
+      <SingleCategory category="tshirt" title="CAMISETAS" />
     </Layout>
   );
 }

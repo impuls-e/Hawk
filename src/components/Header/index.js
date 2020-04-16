@@ -1,44 +1,39 @@
-import { Link } from "gatsby"
-import React, { useState } from "react"
-import "./styles.css"
+import { Link } from 'gatsby';
+import React, { useState } from 'react';
+import './styles.css';
 
-export default function Header({
-  headerLogo,
-  profileIcon,
-  cartIcon,
-  searchIcon,
-}) {
-  const [classOn, setClassOn] = useState("")
-  const [show, setShow] = useState(false)
+export default function Header({ headerLogo, profileIcon, cartIcon, searchIcon }) {
+  const [ classOn, setClassOn ] = useState('');
+  const [ show, setShow ] = useState(false);
   const menu = {
     links: [
       {
         id: 1,
-        path: "/camisetas",
-        text: "camisetas",
+        path: '/camisetas',
+        text: 'camisetas'
       },
       {
         id: 2,
-        path: "/shorts",
-        text: "shorts",
+        path: '/shorts',
+        text: 'shorts'
       },
       {
         id: 3,
-        path: "/calças",
-        text: "calças",
+        path: '/calcas',
+        text: 'calças'
       },
       {
         id: 4,
-        path: "/acessorios",
-        text: "acessórios",
-      },
-    ],
-  }
+        path: '/acessorios',
+        text: 'acessórios'
+      }
+    ]
+  };
 
   function handleMenu() {
-    document.body.style.overflow = show ? "initial" : "hidden"
-    show ? setClassOn("") : setClassOn("on")
-    setShow(!show)
+    document.body.style.overflow = show ? 'initial' : 'hidden';
+    show ? setClassOn('') : setClassOn('on');
+    setShow(!show);
   }
 
   return (
@@ -53,13 +48,15 @@ export default function Header({
             </div>
           </div>
 
-          <img src={headerLogo} alt="Hawk logo" />
+          <Link to="/" className="header-logo">
+            <img src={headerLogo} alt="Hawk logo" />
+          </Link>
 
           <nav>
             <ul>
-              {menu.links.map(link => (
+              {menu.links.map((link) => (
                 <li key={link.id}>
-                  <Link to={link.path} className="">
+                  <Link to={link.path} onClick={handleMenu}>
                     {link.text}
                   </Link>
                 </li>
@@ -79,5 +76,5 @@ export default function Header({
         </div>
       </header>
     </React.Fragment>
-  )
+  );
 }
