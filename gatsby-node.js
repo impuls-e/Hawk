@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/produto/${node.frontmatter.handle}`,
       component: path.resolve(`./src/templates/product.js`),
       context: {
-        product: node.frontmatter.handle,
+        product: node.frontmatter,
       },
     })
   })

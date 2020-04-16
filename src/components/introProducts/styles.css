@@ -1,0 +1,211 @@
+.intro-projects {
+  display: flex;
+  flex-direction: column;
+  padding: 98px 2vw 10vh;
+}
+.intro-projects section {
+  display: flex;
+  flex-direction: column;
+  margin: 3vh 0vw;
+}
+.intro-projects section .img-main {
+  height: 60vh;
+  display: flex;
+  max-height: 420px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+}
+.intro-projects section .img-main img {
+  height: 100%;
+}
+.intro-projects section .imgs-body {
+  height: 20vh;
+  display: flex;
+  max-height: 150px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+.intro-projects section .imgs-body img {
+  height: 100%;
+  margin: 2vh;
+}
+.intro-projects aside {
+  display: flex;
+  flex-direction: column;
+  margin: 0vh 0vw 10vh;
+}
+.intro-projects aside h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2vh;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.intro-projects aside h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2vh;
+}
+.intro-projects aside p {
+  margin-bottom: 2vh;
+}
+.intro-projects aside .description {
+  border-bottom: 1px #dedcdc solid;
+  margin-bottom: 1vh;
+}
+.intro-projects aside .product-lenght {
+  border-bottom: 1px #dedcdc solid;
+  margin-bottom: 1vh;
+}
+.intro-projects aside .lenght {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+.intro-projects aside .lenght a {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 10vh;
+  height: 10vh;
+  align-items: center;
+  border-radius: 50px;
+  background-color: #dedcdc;
+  color: #000;
+  text-decoration: none;
+  margin: 1vh;
+  border: 1px solid #757575;
+}
+.intro-projects aside .product-footer {
+  display: flex;
+  flex-direction: column;
+}
+.intro-projects aside .product-footer .quantity {
+  display: flex;
+  border-bottom: 1px solid #000;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+.intro-projects aside .product-footer .quantity a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  width: 20vw;
+  height: 8vh;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #757575;
+  text-decoration: none;
+  margin: 2vh;
+  border: 2px solid #000;
+  align-self: center;
+}
+.intro-projects aside .product-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 40vw;
+  height: 8vh;
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  margin: 2vh;
+  border: 2px solid #000;
+  align-self: center;
+}
+.intro-projects aside .product-footer a svg {
+  margin: 1vh;
+}
+@media (min-width: 768px) {
+  .intro-projects {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .intro-projects section {
+    width: 50%;
+    flex-direction: row-reverse;
+    height: 75vh;
+  }
+  .intro-projects section .img-main {
+    width: 70%;
+    margin: 0 1vh;
+    height: 100%;
+    max-height: unset;
+  }
+  .intro-projects section .imgs-body {
+    width: 30%;
+    flex-direction: column;
+    height: 100%;
+    max-height: unset;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    flex: 1;
+  }
+  .intro-projects section .imgs-body img {
+    margin: 0 0 0.33% 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    height: 33%;
+    flex: 1;
+  }
+  .intro-projects aside {
+    width: 45%;
+    margin: 3vh 0 0 5vh;
+  }
+  .intro-projects aside .description {
+    border: none;
+  }
+  .intro-projects aside h1 {
+    text-align: left;
+    font-size: 2rem;
+  }
+  .intro-projects aside p {
+    font-size: 1rem;
+  }
+  .intro-projects aside h3 {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 5vh;
+  }
+  .intro-projects aside h4 {
+    font-size: 1.4rem;
+    margin-bottom: 3vh;
+    width: 100%;
+  }
+  .intro-projects aside .lenght {
+    justify-content: flex-start;
+    margin-bottom: 3vh;
+  }
+  .intro-projects aside .product-lenght {
+    margin-bottom: 3vh;
+    border-bottom: 2px #000 solid;
+  }
+  .intro-projects aside .product-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .intro-projects aside .product-footer .quantity {
+    width: 35%;
+    margin: 0;
+    border: 0;
+    padding: 0px 5% 0 0;
+    border-right: 2px solid #000;
+  }
+  .intro-projects aside .product-footer .quantity a {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .intro-projects aside .product-footer a {
+    width: 55%;
+    margin: 0;
+    border: 0;
+  }
+}
