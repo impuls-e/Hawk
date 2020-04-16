@@ -9,7 +9,6 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-
       <Hero />
       <ProductCatalog />
     </Layout>
