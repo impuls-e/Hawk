@@ -34,11 +34,30 @@ button {
   letter-spacing: 1.25px;
   padding: 0;
 }
+
+.header-offset {
+  padding-top: 98px;
+}
+
+section {
+  padding: 0 2vw;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 13px;
   }
+
+  section {
+    padding: 0 2vw;
+  }
 }
+@media (min-width: 880px) {
+  .header-offset {
+    padding-top: 80px;
+  }
+}
+
 @media (min-width: 1100px) {
   html {
     font-size: 14px;
