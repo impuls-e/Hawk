@@ -56,9 +56,7 @@ export default function Header({ headerLogo, profileIcon, cartIcon, searchIcon }
             <ul>
               {menu.links.map((link) => (
                 <li key={link.id}>
-                  <Link to={link.path} onClick={handleMenu}>
-                    {link.text}
-                  </Link>
+                  <Link to={link.path}>{link.text}</Link>
                 </li>
               ))}
             </ul>
