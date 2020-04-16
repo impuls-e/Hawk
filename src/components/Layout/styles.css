@@ -34,11 +34,21 @@ button {
   letter-spacing: 1.25px;
   padding: 0;
 }
+
+.section {
+  padding: 98px 2vw 0 2vw;
+}
 @media (min-width: 768px) {
   html {
     font-size: 13px;
   }
 }
+@media (min-width: 880px) {
+  .section {
+    padding: 80px 2vw 0 2vw;
+  }
+}
+
 @media (min-width: 1100px) {
   html {
     font-size: 14px;
