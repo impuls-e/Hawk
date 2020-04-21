@@ -1,44 +1,52 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
 const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   // Query for all products in Shopify
   const result = await graphql(`
     query {
-      allMdx {
+      allShopifyProduct(sort: { fields: [title] }) {
         edges {
           node {
-            frontmatter {
-              description
-              title
-              value
-              imgUrl {
+            title
+            handle
+            shopifyId
+            description
+            availableForSale
+            options {
+              name
+              values
+            }
+            images {
+              localFile {
                 childImageSharp {
-                  fluid(maxHeight: 270) {
+                  fluid {
                     src
                   }
                 }
               }
-              handle
+            }
+            productType
+            priceRange {
+              maxVariantPrice {
+                amount
+              }
+              minVariantPrice {
+                amount
+              }
             }
           }
         }
       }
     }
   `)
-  // The product "title" is generated automatically by Shopify
-  result.data.allMdx.edges.forEach(({ node }) => {
+  // Iterate over all products and create a new page using a template
+  // The product "handle" is generated automatically by Shopify
+  result.data.allShopifyProduct.edges.forEach(({ node }) => {
     createPage({
-      path: `/produto/${node.frontmatter.handle}`,
+      path: `/produto/${node.handle}`,
       component: path.resolve(`./src/templates/product.js`),
       context: {
-        product: node.frontmatter,
+        product: node,
       },
     })
   })
