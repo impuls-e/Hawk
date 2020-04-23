@@ -1,9 +1,12 @@
-import React from 'react';
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
-import { MdMailOutline } from 'react-icons/md';
-import './styles.css';
+import React from 'react'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { MdMailOutline } from 'react-icons/md'
+import './styles.css'
 
-export default function Footer({ footerLogo, paymentImage }) {
+import footerLogo from '../../images/footerLogo.svg'
+import paymentImage from '../../images/payment.svg'
+
+export default function Footer() {
   return (
     <footer>
       <div className="wrap-footer">
@@ -29,5 +32,5 @@ export default function Footer({ footerLogo, paymentImage }) {
         </div>
       </div>
     </footer>
-  );
+  )
 }
