@@ -5,7 +5,7 @@ import Context from "~/context/StoreContext"
 
 const client = Client.buildClient({
   storefrontAccessToken: "242c8add4281ba3bfd8ff54dfd1d1811",
-  domain: `hawk-art-clothing.myshopify.com`,
+  domain: `https://hawk-art-clothing.myshopify.com`,
 })
 
 const ContextProvider = ({ children }) => {
