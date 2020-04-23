@@ -5,6 +5,7 @@ import { FiShoppingBag } from "react-icons/fi"
 import SEO from "../../components/Seo"
 import ProductForm from "~/components/ProductForm"
 import { Img } from "~/utils/styles"
+import "./styles.css"
 
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
