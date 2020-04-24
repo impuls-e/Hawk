@@ -1,9 +1,12 @@
-import React, { useState, useContext, useEffect, useCallback } from 'react'
-import find from 'lodash/find'
-import isEqual from 'lodash/isEqual'
-import PropTypes from 'prop-types'
+import React, { useState, useContext, useEffect, useCallback } from "react"
+import find from "lodash/find"
+import isEqual from "lodash/isEqual"
+import PropTypes from "prop-types"
+import { FiShoppingBag } from "react-icons/fi"
+import { Link } from "gatsby"
 
-import StoreContext from '~/context/StoreContext'
+import StoreContext from "~/context/StoreContext"
+import { Form, Buttons } from "./styles"
 
 const ProductForm = ({ product }) => {
   const {
@@ -92,52 +95,62 @@ const ProductForm = ({ product }) => {
   const price = Intl.NumberFormat(undefined, {
     currency: minVariantPrice.currencyCode,
     minimumFractionDigits: 2,
-    style: 'currency',
+    style: "currency",
   }).format(variant.price)
 
   return (
     <>
-      <h3>{price}</h3>
-      {options.map(({ id, name, values }, index) => (
-        <React.Fragment key={id}>
-          <label htmlFor={name}>{name} </label>
-          <select
-            name={name}
-            key={id}
-            onChange={event => handleOptionChange(index, event)}
-          >
-            {values.map(value => (
-              <option
-                value={value}
-                key={`${name}-${value}`}
-                disabled={checkDisabled(name, value)}
+      <Form>
+        <div className="lenght">
+          {options.map(({ id, name, values }, index) => (
+            <React.Fragment key={id}>
+              <h4 htmlFor={name}>Tamanho </h4>
+              <select
+                name={name}
+                key={id}
+                onChange={event => handleOptionChange(index, event)}
               >
-                {value}
-              </option>
-            ))}
-          </select>
-          <br />
-        </React.Fragment>
-      ))}
-      <label htmlFor="quantity">Quantity </label>
-      <input
-        type="number"
-        id="quantity"
-        name="quantity"
-        min="1"
-        step="1"
-        onChange={handleQuantityChange}
-        value={quantity}
-      />
-      <br />
-      <button
-        type="submit"
-        disabled={!available || adding}
-        onClick={handleAddToCart}
-      >
-        Add to Cart
-      </button>
-      {!available && <p>This Product is out of Stock!</p>}
+                {values.map(value => (
+                  <option
+                    value={value}
+                    key={`${name}-${value}`}
+                    disabled={checkDisabled(name, value)}
+                  >
+                    {value}
+                  </option>
+                ))}
+              </select>
+              <br />
+            </React.Fragment>
+          ))}
+        </div>
+        <div className="quantity">
+          <h4>Quantidade </h4>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            step="1"
+            onChange={handleQuantityChange}
+            value={quantity}
+          />
+        </div>
+      </Form>
+      <Buttons>
+        <a
+          type="submit"
+          disabled={!available || adding}
+          onClick={handleAddToCart}
+        >
+          Adicionar ao carrinho
+          <FiShoppingBag />
+        </a>
+        <Link to="/cart">
+          Checkout
+          <FiShoppingBag />
+        </Link>
+      </Buttons>
     </>
   )
 }

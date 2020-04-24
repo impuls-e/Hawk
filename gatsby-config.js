@@ -34,6 +34,7 @@ module.exports = {
         // icon: `src/images/hawkIcon.svg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-shopify`,
       options: {

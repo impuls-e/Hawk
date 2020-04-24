@@ -9,6 +9,15 @@ import "./styles.css"
 
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
+  const formattedNumber = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  })
+
+  const value = formattedNumber.format(
+    product.priceRange.minVariantPrice.amount
+  )
+
   return (
     <>
       <SEO title={product.title} description={product.description} />
@@ -39,30 +48,10 @@ const ProductPage = ({ data }) => {
         <aside>
           <div className="description">
             <h1>{product.title}</h1>
-            <h3>R$ {product.priceRange.minVariantPrice.amount},00</h3>
+            <h3>{value}</h3>
             <h4>Descrição do Produto</h4>
             <p>{product.description}</p>
-          </div>
-          <div className="product-lenght">
-            <h4>{product.options.name}</h4>
-            <div className="lenght">
-              <a href="#">{product.options.values[0]}</a>
-              <a href="#">{product.options.values[1]}</a>
-              <a href="#">{product.options.values[2]}</a>
-              <a href="#">{product.options.values[3]}</a>
-              <a href="#">{product.options.values[4]}</a>
-            </div>
-          </div>
-          <div className="product-footer">
-            <h4>Quantidade</h4>
-            <div className="quantity">
-              <a href="#">- 1 +</a>
-            </div>
-
             <ProductForm product={product} />
-            <a href="#">
-              Adicionar ao Carrinho <FiShoppingBag />
-            </a>
           </div>
         </aside>
       </div>

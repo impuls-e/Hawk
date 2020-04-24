@@ -1,9 +1,9 @@
-import React from 'react';
-import './styles.css';
+import React from "react"
+import "./styles.css"
 
 export default function Newsletter() {
   return (
-    <section>
+    <section className="nl">
       <div className="top-line" />
       <div className="newsletter">
         <div className="text-newsletter">
@@ -19,14 +19,20 @@ export default function Newsletter() {
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <div style={{ display: 'none' }}>
+          <div style={{ display: "none" }}>
             <label>
               Don’t fill this out: <input name="bot-field" />
             </label>
           </div>
 
           <div className="input-box">
-            <input placeholder="Nome" type="text" name="name" id="name" required="{true}" />
+            <input
+              placeholder="Nome"
+              type="text"
+              name="name"
+              id="name"
+              required="{true}"
+            />
           </div>
 
           <div className="input-box">
@@ -39,5 +45,5 @@ export default function Newsletter() {
         </form>
       </div>
     </section>
-  );
+  )
 }
