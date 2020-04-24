@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { FiShoppingBag } from "react-icons/fi"
 
 import SEO from "../../components/Seo"
 import ProductForm from "~/components/ProductForm"
@@ -18,6 +17,8 @@ const ProductPage = ({ data }) => {
     product.priceRange.minVariantPrice.amount
   )
 
+  const imgs = product.images
+
   return (
     <>
       <SEO title={product.title} description={product.description} />
@@ -31,18 +32,13 @@ const ProductPage = ({ data }) => {
             />
           </div>
           <div className="imgs-body">
-            <img
-              src={`http://localhost:8000/static/2e86485e9b61f0a92f09ac7e376751f4/c2da5/tshirt-black.png`}
-              alt="Imagem do produto auxiliar"
-            />
-            <img
-              src={`http://localhost:8000/static/2e86485e9b61f0a92f09ac7e376751f4/c2da5/tshirt-black.png`}
-              alt="Imagem do produto auxiliar2"
-            />
-            <img
-              src={`http://localhost:8000/static/2e86485e9b61f0a92f09ac7e376751f4/c2da5/tshirt-black.png`}
-              alt="Imagem do produto auxiliar3"
-            />
+            {imgs.map(img => (
+              <Img
+                key={img}
+                fluid={img.localFile.childImageSharp.fluid}
+                alt="An image apresentation of current product"
+              />
+            ))}
           </div>
         </section>
         <aside>

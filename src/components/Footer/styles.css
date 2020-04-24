@@ -36,7 +36,7 @@ footer .wrap-footer .contact div svg + svg {
   margin-left: 7.5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   footer {
     height: 40vh;
   }

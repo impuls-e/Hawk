@@ -146,10 +146,7 @@ const ProductForm = ({ product }) => {
           Adicionar ao carrinho
           <FiShoppingBag />
         </a>
-        <Link to="/cart">
-          Checkout
-          <FiShoppingBag />
-        </Link>
+        <Link to="/cart">Ir para o Checkout</Link>
       </Buttons>
     </>
   )
