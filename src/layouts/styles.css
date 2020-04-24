@@ -1,11 +1,11 @@
-@import './reset.css';
+@import "./reset.css";
 @font-face {
-  font-family: 'Archivo-Regular';
-  src: url('../fonts/Archivo-Regular.ttf');
+  font-family: "Archivo-Regular";
+  src: url("../fonts/Archivo-Regular.ttf");
 }
 body,
 button {
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 html {
   font-size: 8px;
@@ -39,17 +39,9 @@ button {
   padding-top: 98px;
 }
 
-section {
-  padding: 0 2vw;
-}
-
 @media (min-width: 768px) {
   html {
     font-size: 13px;
-  }
-
-  section {
-    padding: 0 2vw;
   }
 }
 @media (min-width: 880px) {

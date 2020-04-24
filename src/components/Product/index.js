@@ -156,6 +156,10 @@ export default function Product({ product }) {
     }
   `)
   const products = data[product].edges
+  const formattedNumber = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  })
 
   return products.map(product => (
     <div key={generateKey(product.node.shopifyId)} className="product-item">
@@ -166,7 +170,11 @@ export default function Product({ product }) {
       <div className="info-item">
         <div className="info-text">
           <h4>{product.node.title}</h4>
-          <p>R$ {product.node.priceRange.minVariantPrice.amount},00</p>
+          <p>
+            {formattedNumber.format(
+              product.node.priceRange.minVariantPrice.amount
+            )}
+          </p>
         </div>
         <Link to={`/produto/${product.node.handle}`}>Ver Produto</Link>
       </div>
