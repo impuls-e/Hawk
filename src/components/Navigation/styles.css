@@ -94,7 +94,7 @@ header .header-menu .menu-section.on ~ nav {
   z-index: 11;
   margin-top: 20vh;
   position: relative;
-  left: -40px;
+  left: -50px;
 }
 
 header .header-menu .menu-section.on ~ nav,
