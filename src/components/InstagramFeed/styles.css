@@ -1,0 +1,34 @@
+.instagram {
+  padding: 5vh 2vw;
+}
+
+.instagram div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.instagram div svg {
+  margin-right: 15px;
+  font-size: 3.5rem;
+}
+
+.instagram .igFeed {
+  margin-top: 5vh;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.instagram .igFeed div {
+  width: 100%;
+  max-width: 250px;
+  align-self: center;
+  justify-self: center;
+}
+
+@media (min-width: 768px) {
+  .instagram .igFeed {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
