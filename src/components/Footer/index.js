@@ -1,14 +1,14 @@
-import React from 'react'
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
-import { MdMailOutline } from 'react-icons/md'
-import './styles.css'
+import React from "react"
+import { FaWhatsapp, FaInstagram } from "react-icons/fa"
+import { MdMailOutline } from "react-icons/md"
+import "./styles.css"
 
-import footerLogo from '../../images/footerLogo.svg'
-import paymentImage from '../../images/payment.svg'
+import footerLogo from "../../images/footerLogo.svg"
+import paymentImage from "../../images/payment.svg"
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <div className="wrap-footer">
         <div className="user-account">
           <h3>MINHA CONTA</h3>

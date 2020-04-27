@@ -1,14 +1,15 @@
-import React, { useContext, useState } from 'react'
-import { Link } from 'gatsby'
+import React, { useContext, useState } from "react"
+import { Link } from "gatsby"
 
-import reduce from 'lodash/reduce'
-import PropTypes from 'prop-types'
-import './styles.css'
-import StoreContext from '~/context/StoreContext'
-import { CartCounter, MenuLink } from './styles'
-import headerLogo from '../../images/hawkIcon.svg'
-import profileIcon from '../../images/profileIcon.svg'
-import searchIcon from '../../images/searchIcon.svg'
+import reduce from "lodash/reduce"
+import PropTypes from "prop-types"
+import "./styles.css"
+import StoreContext from "~/context/StoreContext"
+import { CartCounter, MenuLink } from "./styles"
+import headerLogo from "../../images/hawkIcon.svg"
+// import profileIcon from "../../images/profileIcon.svg"
+import { FiShoppingCart } from "react-icons/fi"
+import searchIcon from "../../images/searchIcon.svg"
 
 const useQuantity = () => {
   const {
@@ -21,35 +22,35 @@ const useQuantity = () => {
 
 const Navigation = () => {
   const [hasItems, quantity] = useQuantity()
-  const [classOn, setClassOn] = useState('')
+  const [classOn, setClassOn] = useState("")
   const [show, setShow] = useState(false)
   const menu = {
     links: [
       {
         id: 1,
-        path: '/camisetas',
-        text: 'camisetas',
+        path: "/camisetas",
+        text: "camisetas",
       },
       {
         id: 2,
-        path: '/shorts',
-        text: 'shorts',
+        path: "/shorts",
+        text: "shorts",
       },
       {
         id: 3,
-        path: '/calcas',
-        text: 'calças',
+        path: "/calcas",
+        text: "calças",
       },
       {
         id: 4,
-        path: '/acessorios',
-        text: 'acessórios',
+        path: "/acessorios",
+        text: "acessórios",
       },
     ],
   }
   function handleMenu() {
-    document.body.style.overflow = show ? 'initial' : 'hidden'
-    show ? setClassOn('') : setClassOn('on')
+    document.body.style.overflow = show ? "initial" : "hidden"
+    show ? setClassOn("") : setClassOn("on")
     setShow(!show)
   }
   return (
@@ -71,19 +72,21 @@ const Navigation = () => {
           <ul>
             {menu.links.map(link => (
               <li key={link.id}>
-                <Link to={link.path}>{link.text}</Link>
+                <Link onClick={handleMenu} to={link.path}>
+                  {link.text}
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="user-session">
-          <img className="searchIcon" src={searchIcon} alt="Hawk search" />
-          <img src={profileIcon} alt="Hawk profile" />
+          {/* <img className="searchIcon" src={searchIcon} alt="Hawk search" />
+          <img src={profileIcon} alt="Hawk profile" /> */}
 
           <MenuLink to="/cart">
             {hasItems && <CartCounter>{quantity}</CartCounter>}
-            Cart 🛍
+            <FiShoppingCart size={20} />
           </MenuLink>
         </div>
       </div>

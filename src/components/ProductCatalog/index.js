@@ -41,21 +41,21 @@ export default function ProductCatalog() {
     <div className="container catalog">
       <h3>Produtos</h3>
       <div className="options">
-        <a className={`${tshirt}`} onClick={e => toggleTshirt("tshirt")}>
+        <button className={`${tshirt}`} onClick={e => toggleTshirt("tshirt")}>
           Camisetas
-        </a>
-        <a className={`${pants}`} onClick={e => togglePants("pants")}>
+        </button>
+        <button className={`${pants}`} onClick={e => togglePants("pants")}>
           Calças
-        </a>
-        <a className={`${short}`} onClick={e => toggleShorts("short")}>
+        </button>
+        <button className={`${short}`} onClick={e => toggleShorts("short")}>
           Shorts
-        </a>
-        <a
+        </button>
+        <button
           className={`${accessories}`}
           onClick={e => toggleAccessories("accessories")}
         >
           Acessórios
-        </a>
+        </button>
       </div>
       <div className="products">
         <Product product={product} />
