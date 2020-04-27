@@ -6,8 +6,6 @@ import { FaInstagram } from 'react-icons/fa'
 import './styles.css'
 
 export default function InstagramFeed() {
-  const igURL = 'https://www.instagram.com/p/'
-
   const data = useStaticQuery(graphql`
     query MyQuery {
       allInstaNode {
@@ -41,7 +39,10 @@ export default function InstagramFeed() {
       </div>
       <div className="igFeed">
         {dataIG.map(igPhoto => (
-          <a key={igPhoto.node.id} href={`${igURL}${igPhoto.node.id}`}>
+          <a
+            key={igPhoto.node.id}
+            href={`https://www.instagram.com/p/${igPhoto.node.id}`}
+          >
             <div className="igPhoto">
               <Img
                 fluid={igPhoto.node.localFile.childImageSharp.fluid}
