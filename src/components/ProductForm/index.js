@@ -13,7 +13,6 @@ const ProductForm = ({ product }) => {
     options,
     variants,
     variants: [initialVariant],
-    priceRange: { minVariantPrice },
   } = product
   const [variant, setVariant] = useState({ ...initialVariant })
   const [quantity, setQuantity] = useState(1)
@@ -91,12 +90,6 @@ const ProductForm = ({ product }) => {
     if (match.availableForSale === true) return false
     return true
   }
-
-  const price = Intl.NumberFormat(undefined, {
-    currency: minVariantPrice.currencyCode,
-    minimumFractionDigits: 2,
-    style: "currency",
-  }).format(variant.price)
 
   return (
     <>

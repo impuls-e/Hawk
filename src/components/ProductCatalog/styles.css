@@ -13,7 +13,7 @@
   justify-content: center;
   margin-bottom: 2vh;
 }
-.catalog .options a {
+.catalog .options button {
   text-align: center;
   text-transform: uppercase;
   padding: 2.2vh 2vw;
