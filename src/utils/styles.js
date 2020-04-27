@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'gatsby-image'
-import styled from '@emotion/styled'
-import { Global, css } from '@emotion/core'
+import React from "react"
+import Image from "gatsby-image"
+import styled from "@emotion/styled"
+import { Global, css } from "@emotion/core"
 
 export const breakpoints = {
   s: 576,
@@ -40,14 +40,18 @@ export const Img = styled(Image)`
 
 export const Container = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  padding: 18vh 2vw;
+
+  @media (min-width: 1024px) {
+    padding: 18vh 10vw 0;
+  }
 `
 
 export const TwoColumnGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 2rem 1fr;
   grid-template-rows: 1auto;
-  grid-template-areas: 'left . right';
+  grid-template-areas: "left . right";
 
   @media (max-width: ${breakpoints.l}px) {
     display: block;
