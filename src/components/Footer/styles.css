@@ -1,4 +1,4 @@
-footer {
+.footer {
   width: 100%;
   height: 60vh;
   background: black;
@@ -7,7 +7,7 @@ footer {
   justify-content: center;
 }
 
-footer .wrap-footer {
+.footer .wrap-footer {
   padding: 0 2vw;
 }
 
@@ -46,7 +46,6 @@ footer .wrap-footer .contact div svg + svg {
     justify-content: space-between;
     align-items: center;
     height: 40vh;
-    padding: 0 10vw;
   }
 
   footer .wrap-footer h3 {

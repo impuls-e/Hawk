@@ -67,9 +67,6 @@
 }
 
 @media (min-width: 1024px) {
-  .nl {
-    padding: 0 10vw;
-  }
   .newsletter {
     display: grid;
     grid-template-columns: 1fr 3fr;

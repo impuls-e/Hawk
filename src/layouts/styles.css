@@ -3,9 +3,14 @@
   font-family: "Archivo-Regular";
   src: url("../fonts/Archivo-Regular.ttf");
 }
+*,
+html,
 body,
 button {
   font-family: "Archivo", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 html {
   font-size: 8px;
