@@ -41,7 +41,7 @@ button {
 }
 
 .header-offset {
-  padding-top: 98px;
+  padding: 98px 2vw 0;
 }
 
 @media (min-width: 768px) {
@@ -54,7 +54,11 @@ button {
     padding-top: 80px;
   }
 }
-
+@media (min-width: 1024px) {
+  .header-offset {
+    padding: 98px 10vw 0;
+  }
+}
 @media (min-width: 1100px) {
   html {
     font-size: 14px;
