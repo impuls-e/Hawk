@@ -2,6 +2,8 @@
   margin: 2vh 0;
 }
 .cart button {
+  width: 100%;
+  max-width: 260px;
   display: flex;
   margin: 2vh 0 5vh 0;
   align-items: center;
