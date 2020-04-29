@@ -14,7 +14,10 @@ export default function Footer() {
       <Container>
         <h4>CONTATO</h4>
         <div>
-          <a title="Enviar um whatsapp para a Hawk" href="#">
+          <a
+            title="Enviar um whatsapp para a Hawk"
+            href="https://wa.me/5548988394527"
+          >
             <FaWhatsapp size={24} />
           </a>
 
@@ -24,7 +27,10 @@ export default function Footer() {
           >
             <FaInstagram size={24} />
           </a>
-          <a title="Enviar um e-mail para a Hawk" href="#">
+          <a
+            title="Enviar um e-mail para a Hawk"
+            href="mailto:muricristiano@gmail.com"
+          >
             <MdMailOutline size={24} />
           </a>
         </div>
