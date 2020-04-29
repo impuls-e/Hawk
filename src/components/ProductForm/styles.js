@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Form = styled.form`
   display: flex;
@@ -21,19 +21,21 @@ export const Buttons = styled.div`
 
   a {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    width: 40vw;
-    height: 8vh;
-    border-radius: 50px;
-    background-color: #000;
+    justify-content: center;
+    background: #000;
+    padding: 2vh 3vw;
+    margin-bottom: 1vh;
+    font-size: 2rem;
     color: #fff;
     text-decoration: none;
-    border: 2px solid #000;
-    align-self: center;
+    font-weight: 600;
     cursor: pointer;
+    flex: 1;
 
+    svg {
+      margin-left: 2vh;
+    }
     & + a {
       margin-left: 4vh;
     }

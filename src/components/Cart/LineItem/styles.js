@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import styled from '@emotion/styled'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -20,19 +20,18 @@ export const Wrapper = styled.div`
     margin: 1vh 0;
   }
   button {
+    max-width: 260px;
     display: flex;
     margin: 2vh 0 5vh 0;
-    justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    width: 40vw;
-    height: 8vh;
-    border-radius: 50px;
-    background-color: #000;
+    justify-content: center;
+    background: #000;
+    padding: 2vh 3vw;
+    font-size: 2rem;
     color: #fff;
     text-decoration: none;
-    border: 2px solid #000;
-    align-self: flex-start;
+    font-weight: 600;
     cursor: pointer;
+    flex: 1;
   }
 `
