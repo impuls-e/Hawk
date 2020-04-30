@@ -1,7 +1,7 @@
-import React, { useContext } from "react"
+import React, { useContext } from 'react'
 
-import StoreContext from "~/context/StoreContext"
-import { Wrapper } from "./styles"
+import StoreContext from '~/context/StoreContext'
+import { Wrapper } from './styles'
 
 const LineItem = props => {
   const { line_item } = props
@@ -36,9 +36,9 @@ const LineItem = props => {
           <p>
             {line_item.title}
             {`  `}
-            {line_item.variant.title === !"Default Title"
+            {line_item.variant.title === !'Default Title'
               ? line_item.variant.title
-              : ""}
+              : ''}
           </p>
           <p>{selectedOptions}</p>
           <p>Quantidade: {line_item.quantity}</p>

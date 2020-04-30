@@ -1,9 +1,9 @@
-import React, { useContext } from "react"
+import React, { useContext } from 'react'
 
-import StoreContext from "~/context/StoreContext"
-import LineItem from "./LineItem"
-import "./styles.css"
-import { MdSecurity } from "react-icons/md"
+import StoreContext from '~/context/StoreContext'
+import LineItem from './LineItem'
+import './styles.css'
+import { MdSecurity } from 'react-icons/md'
 
 const Cart = () => {
   const {

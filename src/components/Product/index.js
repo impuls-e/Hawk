@@ -1,8 +1,8 @@
-import React from "react"
-import "./styles.css"
+import React from 'react'
+import './styles.css'
 
-import Img from "gatsby-image"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import Img from 'gatsby-image'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 export default function Product({ product }) {
   const generateKey = pre => {
     return `${pre}_${new Date().getTime()}`
@@ -156,9 +156,9 @@ export default function Product({ product }) {
     }
   `)
   const products = data[product].edges
-  const formattedNumber = new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
+  const formattedNumber = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
   })
 
   return products.map(product => (

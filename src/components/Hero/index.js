@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
-import "./styles.css"
+import './styles.css'
 
 export default function Hero() {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,13 @@ export default function Hero() {
     },
   ]
   return (
-    <div className="hero">
+    <div
+      className="hero"
+      data-sal="slide-up"
+      data-sal-delay="200"
+      data-sal-easing="ease"
+      data-sal-duration="1000"
+    >
       <BackgroundImage
         Tag="section"
         className="background"

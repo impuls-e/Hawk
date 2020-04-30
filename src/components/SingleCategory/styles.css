@@ -1,3 +1,6 @@
+.header-offset {
+  padding: 98px 2vw 0;
+}
 .product-catalog > h2 {
   text-align: center;
   margin: 30px 0;
@@ -23,5 +26,10 @@
 @media (min-width: 768px) {
   .product-catalog > div {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 880px) {
+  .header-offset {
+    padding-top: 80px;
   }
 }
