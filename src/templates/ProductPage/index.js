@@ -1,16 +1,16 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import SEO from "../../components/Seo"
-import ProductForm from "~/components/ProductForm"
-import { Img } from "~/utils/styles"
-import "./styles.css"
+import SEO from '../../components/Seo'
+import ProductForm from '~/components/ProductForm'
+import { Img } from '~/utils/styles'
+import './styles.css'
 
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
-  const formattedNumber = new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
+  const formattedNumber = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
   })
 
   const value = formattedNumber.format(
@@ -23,7 +23,13 @@ const ProductPage = ({ data }) => {
     <>
       <SEO title={product.title} description={product.description} />
 
-      <div className="intro-projects">
+      <div
+        className="intro-projects"
+        data-sal="slide-up"
+        data-sal-delay="200"
+        data-sal-easing="ease"
+        data-sal-duration="1000"
+      >
         <section>
           <div className="img-main">
             <Img
@@ -34,7 +40,7 @@ const ProductPage = ({ data }) => {
           <div className="imgs-body">
             {imgs.map(img => (
               <Img
-                key={img}
+                key={img.id}
                 fluid={img.localFile.childImageSharp.fluid}
                 alt="An image apresentation of current product"
               />

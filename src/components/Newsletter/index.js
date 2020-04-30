@@ -1,9 +1,15 @@
-import React from "react"
-import "./styles.css"
+import React from 'react'
+import './styles.css'
 
 export default function Newsletter() {
   return (
-    <section className="nl">
+    <section
+      className="nl"
+      data-sal="slide-up"
+      data-sal-delay="200"
+      data-sal-easing="ease"
+      data-sal-duration="1000"
+    >
       <div className="top-line" />
       <div className="newsletter">
         <div className="text-newsletter">
@@ -19,7 +25,7 @@ export default function Newsletter() {
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <div style={{ display: "none" }}>
+          <div style={{ display: 'none' }}>
             <label>
               Don’t fill this out: <input name="bot-field" />
             </label>

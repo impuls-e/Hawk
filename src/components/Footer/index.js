@@ -10,7 +10,11 @@ import { FooterMenu, Container } from './styles'
 
 export default function Footer() {
   return (
-    <FooterMenu>
+    <FooterMenu 
+      data-sal="slide-up"
+      data-sal-delay="200"
+      data-sal-easing="ease"
+      data-sal-duration="1000">
       <Container>
         <h4>CONTATO</h4>
         <div>
