@@ -1,36 +1,47 @@
-import React from "react"
-import { FaWhatsapp, FaInstagram } from "react-icons/fa"
-import { MdMailOutline } from "react-icons/md"
-import "./styles.css"
+import React from 'react'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { MdMailOutline } from 'react-icons/md'
+import { Link } from 'gatsby'
+import footerLogo from '../../images/footerLogo.svg'
+import paymentImage from '../../images/payment.svg'
 
-import footerLogo from "../../images/footerLogo.svg"
-import paymentImage from "../../images/payment.svg"
+import { FooterMenu, Container } from './styles'
+// importação dos componentes criados no arquivo styles.js
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="wrap-footer">
-        <div className="user-account">
-          <h3>MINHA CONTA</h3>
-          <h4>MEU PERFIL</h4>
-          <h4>MEUS PEDIDOS</h4>
-        </div>
-        <div className="contact">
-          <h3>CONTATO</h3>
-          <div>
+    <FooterMenu>
+      <Container>
+        <h4>CONTATO</h4>
+        <div>
+          <a
+            title="Enviar um whatsapp para a Hawk"
+            href="https://wa.me/5548988394527"
+          >
             <FaWhatsapp size={24} />
+          </a>
+
+          <a
+            title="Vai para o instagram da Hawk"
+            href="https://www.instagram.com/hawk.br/"
+          >
             <FaInstagram size={24} />
+          </a>
+          <a
+            title="Enviar um e-mail para a Hawk"
+            href="mailto:muricristiano@gmail.com"
+          >
             <MdMailOutline size={24} />
-          </div>
+          </a>
         </div>
-        <div className="payment-method">
-          <h3>FORMAS DE PAGAMENTO</h3>
-          <img src={paymentImage} alt="Payment methods" />
-        </div>
-        <div className="footer-logo">
-          <img src={footerLogo} alt="Hawk logo" />
-        </div>
-      </div>
-    </footer>
+      </Container>
+      <Container>
+        <h4>FORMAS DE PAGAMENTO</h4>
+        <img src={paymentImage} alt="Payment methods" />
+      </Container>
+      <Link title="Vai para o topo da página" to="#">
+        <img src={footerLogo} alt="Hawk logo" />
+      </Link>
+    </FooterMenu>
   )
 }
