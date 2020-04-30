@@ -1,12 +1,12 @@
-import React, { useState, useContext, useEffect, useCallback } from "react"
-import find from "lodash/find"
-import isEqual from "lodash/isEqual"
-import PropTypes from "prop-types"
-import { FiShoppingBag } from "react-icons/fi"
-import { Link } from "gatsby"
+import React, { useState, useContext, useEffect, useCallback } from 'react'
+import find from 'lodash/find'
+import isEqual from 'lodash/isEqual'
+import PropTypes from 'prop-types'
+import { FiShoppingCart } from 'react-icons/fi'
+import { Link } from 'gatsby'
 
-import StoreContext from "~/context/StoreContext"
-import { Form, Buttons } from "./styles"
+import StoreContext from '~/context/StoreContext'
+import { Form, Buttons } from './styles'
 
 const ProductForm = ({ product }) => {
   const {
@@ -68,13 +68,13 @@ const ProductForm = ({ product }) => {
     addVariantToCart(productVariant.shopifyId, quantity)
   }
 
-  /* 
-  Using this in conjunction with a select input for variants 
-  can cause a bug where the buy button is disabled, this 
+  /*
+  Using this in conjunction with a select input for variants
+  can cause a bug where the buy button is disabled, this
   happens when only one variant is available and it's not the
-  first one in the dropdown list. I didn't feel like putting 
+  first one in the dropdown list. I didn't feel like putting
   in time to fix this since its an edge case and most people
-  wouldn't want to use dropdown styled selector anyways - 
+  wouldn't want to use dropdown styled selector anyways -
   at least if the have a sense for good design lol.
   */
   const checkDisabled = (name, value) => {
@@ -136,10 +136,12 @@ const ProductForm = ({ product }) => {
           disabled={!available || adding}
           onClick={handleAddToCart}
         >
-          Adicionar ao carrinho
-          <FiShoppingBag />
+          Comprar
         </a>
-        <Link to="/cart">Ir para o Checkout</Link>
+        <Link to="/cart">
+          Checkout
+          <FiShoppingCart />
+        </Link>
       </Buttons>
     </>
   )
