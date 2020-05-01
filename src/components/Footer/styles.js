@@ -7,6 +7,7 @@ export const FooterMenu = styled.footer`
   display: flex;
   flex-direction: column;
   background: #000;
+  height: 35vh;
   justify-content: center;
   padding: 4vh 0;
   /* aplicando o estilo normalmente */
