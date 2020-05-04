@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
+import { SocialProfileJsonLd } from 'gatsby-plugin-next-seo'
 import './styles.css'
 
 export default function Hero() {
@@ -35,19 +36,27 @@ export default function Hero() {
     },
   ]
   return (
-    <div
-      className="hero"
-      data-sal="slide-up"
-      data-sal-delay="200"
-      data-sal-easing="ease"
-      data-sal-duration="1000"
-    >
-      <BackgroundImage
-        Tag="section"
-        className="background"
-        fluid={sources}
-        backgroundColor={`#040e18`}
+    <>
+      <SocialProfileJsonLd
+        type="Person"
+        name="Hawk"
+        url="https://hawk.art.br"
+        sameAs={['https://instagram.com/hawk.br']}
       />
-    </div>
+      <div
+        className="hero"
+        data-sal="slide-up"
+        data-sal-delay="200"
+        data-sal-easing="ease"
+        data-sal-duration="1000"
+      >
+        <BackgroundImage
+          Tag="section"
+          className="background"
+          fluid={sources}
+          backgroundColor={`#040e18`}
+        />
+      </div>
+    </>
   )
 }

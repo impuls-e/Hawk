@@ -7,7 +7,7 @@ import Hero from '../components/Hero'
 import InstagramFeed from '../components/InstagramFeed'
 const IndexPage = () => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO />
     <Hero />
     <ProductCatalog />
     <InstagramFeed />
