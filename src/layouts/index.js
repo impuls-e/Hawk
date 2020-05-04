@@ -6,6 +6,7 @@ import ContextProvider from '~/provider/ContextProvider'
 
 import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
+import SearchField from '../components/SearchField'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 

@@ -1,0 +1,37 @@
+.search-section {
+  background: #beb9b9;
+  height: 38px;
+  display: flex;
+}
+
+.search-section input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: rgba(190, 185, 185, 0.7);
+  outline: none;
+  text-align: center;
+}
+
+.search-section input:focus::placeholder {
+  color: transparent;
+}
+
+.search-section input::placeholder {
+  color: #000;
+}
+
+.search-section svg {
+  height: 100%;
+}
+
+.result-area {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 5vh 2vw;
+}
+
+.result-area div {
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
