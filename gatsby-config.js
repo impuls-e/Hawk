@@ -118,6 +118,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-next-seo`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-165471341-1`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     {
