@@ -32,7 +32,13 @@ export default function InstagramFeed() {
   const dataIG = data.allInstaNode.edges
 
   return (
-    <div className="instagram">
+    <div
+      className="instagram"
+      data-sal="slide-up"
+      data-sal-delay="200"
+      data-sal-easing="ease"
+      data-sal-duration="1000"
+    >
       <div>
         <FaInstagram />
         <h3>SIGA A HAWK</h3>
@@ -40,6 +46,10 @@ export default function InstagramFeed() {
       <div className="igFeed">
         {dataIG.map(igPhoto => (
           <a
+            data-sal="zoom-in"
+            data-sal-delay="200"
+            data-sal-easing="ease"
+            data-sal-duration="1000"
             key={igPhoto.node.id}
             href={`https://www.instagram.com/p/${igPhoto.node.id}`}
           >

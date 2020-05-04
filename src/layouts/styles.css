@@ -1,13 +1,13 @@
-@import "./reset.css";
+@import './reset.css';
 @font-face {
-  font-family: "Archivo-Regular";
-  src: url("../fonts/Archivo-Regular.ttf");
+  font-family: 'Archivo-Regular';
+  src: url('../fonts/Archivo-Regular.ttf');
 }
 *,
 html,
 body,
 button {
-  font-family: "Archivo", sans-serif;
+  font-family: 'Archivo', sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,25 +40,12 @@ button {
   padding: 0;
 }
 
-.header-offset {
-  padding: 98px 2vw 0;
-}
-
 @media (min-width: 768px) {
   html {
     font-size: 13px;
   }
 }
-@media (min-width: 880px) {
-  .header-offset {
-    padding-top: 80px;
-  }
-}
-@media (min-width: 1024px) {
-  .header-offset {
-    padding: 98px 10vw 0;
-  }
-}
+
 @media (min-width: 1100px) {
   html {
     font-size: 14px;
