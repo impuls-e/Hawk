@@ -7,9 +7,16 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Hawk`,
-    description: `Hawk confecções`,
-    author: `@gatsbyjs`,
+    titleTemplate: 'Hawk · **SLOGAN**',
+    description: `**Company-Description**`,
+    siteUrl: `https://hawk.art.br`,
+    social: {
+      twitter: `hawk`,
+    },
+    image: `${__dirname}/src/images/logoDesktop.png`,
+    searchConsole: `6QPDBwsljOgDA74BN9n7-No7QO_mNa-KOUqa1BLIyv0`, // Path to your image you placed in the 'static' folder
   },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -35,6 +42,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-layout`,
@@ -94,8 +102,42 @@ module.exports = {
         username: `hawk.br`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://hawk.art.br',
+        sitemap: 'https://hawk.art.br/sitemap.xml',
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
+    `gatsby-plugin-next-seo`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-165471341-1`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Hawk E-Commerce`,
+        short_name: `HWK`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `minimal-ui`,
+        icon: `content/assets/icon.png`,
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 }

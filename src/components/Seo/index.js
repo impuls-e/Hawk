@@ -1,88 +1,97 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
-
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+const SEO = ({ lang, pathname }) => {
+  const data = useStaticQuery(
     graphql`
-      query {
+      query SeoQuery {
         site {
           siteMetadata {
-            title
-            description
-            author
+            defaultTitle: title
+            titleTemplate
+            defaultDescription: description
+            siteUrl
+            defaultImage: image
+            social {
+              twitter
+            }
+            searchConsole
           }
         }
       }
     `
-  );
+  )
 
-  const metaDescription = description || site.siteMetadata.description;
+  const company = data.site.siteMetadata
+  const seo = {
+    title: company.title || company.defaultTitle,
+    description: company.description || company.defaultDescription,
+    image: `${company.siteUrl}${company.image || company.defaultImage}`,
+    url: `${company.siteUrl}${company.pathname || '/'}`,
+    canonical: pathname ? `${company.siteUrl}${pathname}` : null,
+  }
 
   return (
     <Helmet
+      title={seo.title}
+      titleTemplate={company.titleTemplate}
       htmlAttributes={{
-        lang
+        lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription
-        },
-        {
-          property: `og:title`,
-          content: title
-        },
-        {
-          property: `og:description`,
-          content: metaDescription
-        },
-        {
-          property: `og:type`,
-          content: `website`
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author
-        },
-        {
-          name: `twitter:title`,
-          content: title
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription
-        }
-      ].concat(meta)}
-    />
-  );
+      link={
+        seo.canonical
+          ? [
+              {
+                rel: 'canonical',
+                href: seo.canonical,
+              },
+            ]
+          : []
+      }
+    >
+      <meta name="google-site-verification" content={company.searchConsole} />
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      <meta charSet="utf-8" />
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      <meta property="og:type" content="website" />
+
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+      {seo.image && <meta property="og:image" content={seo.image} />}
+
+      {seo.image && <meta property="og:image:url" content={seo.image} />}
+
+      {seo.image && <meta property="og:image:type" content="image/png" />}
+      <meta name="twitter:card" content="summary_large_image" />
+      {company.social.twitter && (
+        <meta name="twitter:creator" content={company.social.twitter} />
+      )}
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.description && (
+        <meta name="twitter:description" content={seo.description} />
+      )}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+    </Helmet>
+  )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `pt-br`,
   meta: [],
-  description: ``
-};
+  description: ``,
+}
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
-};
+  title: PropTypes.string.isRequired,
+  pathname: PropTypes.string,
+}
 
-export default SEO;
+export default SEO
