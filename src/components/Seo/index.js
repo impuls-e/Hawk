@@ -62,7 +62,12 @@ const SEO = ({ lang, pathname }) => {
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.image && (
+        <meta
+          property="og:image"
+          content="https://instagram.ffln1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/80574084_625340068218316_126440435580141568_n.jpg?_nc_ht=instagram.ffln1-1.fna.fbcdn.net&_nc_ohc=p9_4V2DUeQ4AX-09vJI&oh=fa4bd73e4122cef167aefde91548073e&oe=5EDA5EB6"
+        />
+      )}
 
       {seo.image && <meta property="og:image:url" content={seo.image} />}
 
