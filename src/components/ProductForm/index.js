@@ -131,16 +131,11 @@ const ProductForm = ({ product }) => {
         </div>
       </Form>
       <Buttons>
-        <a
-          type="submit"
+        <Link 
+          to="/cart"
           disabled={!available || adding}
-          onClick={handleAddToCart}
-        >
+          onClick={handleAddToCart}>
           Comprar
-        </a>
-        <Link to="/cart">
-          Checkout
-          <FiShoppingCart />
         </Link>
       </Buttons>
     </>
