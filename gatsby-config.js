@@ -35,6 +35,7 @@ module.exports = {
         exitEventName: 'sal:out', // Exit event name
       },
     },
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
