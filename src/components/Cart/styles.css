@@ -1,9 +1,65 @@
-.cart h2 {
-  margin: 2vh 0;
+.cart-products {
+  border: 3px solid #f4f4f4;
+  padding: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 15px;
 }
-.cart button {
+
+.cart-products table {
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  grid-template-columns: minmax(90px, 1.5fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr)
+    minmax(50px, 1fr) minmax(50px, 1fr);
+  row-gap: 5px;
+}
+
+.cart-products table thead,
+tbody,
+tr {
+  display: contents;
+}
+
+.cart-products th,
+td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-products td svg:hover {
+  color: #ba3424;
+}
+
+.cart-products td a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.cart-values {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-values div {
+  display: grid;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cart-values div:not(:last-child) {
+  border-top: 1px solid #f4f4f4;
+  padding: 10px;
+}
+
+.cart-values div .cart-value-total {
+  font-size: 2rem;
+}
+
+.cart-values button {
   width: 100%;
-  max-width: 260px;
   display: flex;
   margin: 2vh 0 5vh 0;
   align-items: center;
@@ -16,7 +72,5 @@
   font-weight: 600;
   cursor: pointer;
   flex: 1;
-}
-.cart button svg {
-  margin: 0 5px;
+  border: none;
 }
