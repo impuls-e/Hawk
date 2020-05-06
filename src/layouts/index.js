@@ -8,6 +8,7 @@ import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import FloatWhatsapp from '../components/FloatWhatsapp'
 
 import './styles.css'
 
@@ -31,6 +32,8 @@ const Layout = ({ children }) => {
             <main>{children}</main>
             <Newsletter />
             <Footer />
+            <FloatWhatsapp/>
+
           </>
         )}
       />
