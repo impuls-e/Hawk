@@ -1,7 +1,7 @@
-import styled from "@emotion/styled"
-import { Link } from "gatsby"
+import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 
-import { breakpoints } from "../../utils/styles"
+import { breakpoints } from '../../utils/styles';
 
 export const MenuLink = styled(Link)`
   color: white;
@@ -12,15 +12,15 @@ export const MenuLink = styled(Link)`
   @media (max-width: ${breakpoints.s}px) {
     font-size: 1.4rem;
   }
-`
+`;
 
 export const CartCounter = styled.span`
-  background-color: white;
-  color: #663399;
+  background-color: red;
+  color: white;
   border-radius: 20px;
   padding: 0 10px;
   font-size: 1.2rem;
   float: right;
   margin: -10px;
   z-index: 20;
-`
+`;
