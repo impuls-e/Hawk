@@ -47,10 +47,19 @@ const Navigation = () => {
     ]
   }
   function handleMenu() {
-    document.body.style.overflow = show ? 'initial' : 'hidden'
+    if (classOn) document.body.style.overflow = show ? 'initial' : 'hidden'
     show ? setClassOn('') : setClassOn('on')
     setShow(!show)
   }
+
+  function handleNavigation() {
+    if (classOn) {
+      document.body.style.overflow = show ? 'initial' : 'hidden'
+      show ? setClassOn('') : setClassOn('on')
+      setShow(!show)
+    }
+  }
+
   return (
     <header>
       <div className="header-menu">
@@ -70,7 +79,7 @@ const Navigation = () => {
           <ul>
             {menu.links.map((link) => (
               <li key={link.id}>
-                <Link to={link.path} onClick={handleMenu}>
+                <Link to={link.path} onClick={handleNavigation}>
                   {link.text}
                 </Link>
               </li>
