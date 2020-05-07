@@ -7,12 +7,12 @@ export const FooterMenu = styled.footer`
   display: flex;
   flex-direction: column;
   background: #000;
-  height: 35vh;
   justify-content: center;
   padding: 4vh 0;
   /* aplicando o estilo normalmente */
 
   @media (min-width: 1024px) {
+    height: 35vh;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 4vh 2vw;
@@ -23,6 +23,8 @@ export const FooterMenu = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    color: #fff;
   }
   img {
     margin: 2vh 0;
@@ -41,6 +43,7 @@ export const Container = styled.div`
   h4,
   svg {
     color: #fff;
+    margin-bottom: 2vh;
   }
   div {
     display: flex;
@@ -50,6 +53,9 @@ export const Container = styled.div`
   }
   a + a {
     margin-left: 4vh;
+  }
+  p {
+    margin-bottom: 2vh;
   }
   /* estilizando os elementos dentro do footer */
 `
