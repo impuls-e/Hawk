@@ -166,7 +166,7 @@ header .header-menu .user-session svg {
 header .header-menu .user-session span {
   padding: 10px 10px;
   margin: -20px -10px;
-  color: #000000;
+  color: #fff;
 }
 @media (min-width: 880px) {
   header {
