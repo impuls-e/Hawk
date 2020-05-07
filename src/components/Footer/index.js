@@ -41,6 +41,12 @@ export default function Footer() {
         </div>
       </Container>
       <Container>
+        <Link
+          title="Vai para a página de politica e privacidades"
+          to="/privacy"
+        >
+          <h4>Politica&Privacidades</h4>
+        </Link>
         <h4>FORMAS DE PAGAMENTO</h4>
         <img src={paymentImage} alt="Payment methods" />
       </Container>
