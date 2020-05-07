@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import Cart from '~/components/Cart'
-import { Container } from '~/utils/styles'
+import Cart from '~/components/Cart';
+import { Container } from '~/utils/styles';
 
 const CartPage = () => (
   <Container
@@ -10,9 +10,9 @@ const CartPage = () => (
     data-sal-easing="ease"
     data-sal-duration="1000"
   >
-    <h1>Carrinho</h1>
+    <h1>Meu Carrinho</h1>
     <Cart />
   </Container>
-)
+);
 
-export default CartPage
+export default CartPage;
