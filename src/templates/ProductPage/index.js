@@ -27,6 +27,13 @@ const ProductPage = ({ data }) => {
     setCurrentImage(image)
   }
 
+  const productDescripton = (
+    <div id="" className="">
+      {product.descriptionHtml}
+    </div>
+  )
+
+  console.log(product)
   return (
     <>
       <SEO title={product.title} description={product.description} />
@@ -81,7 +88,9 @@ const ProductPage = ({ data }) => {
             <h1>{product.title}</h1>
             <h3>{value}</h3>
             <h4>Descrição do Produto</h4>
-            <p>{product.description}</p>
+            <div
+              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+            />
             <ProductForm product={product} />
           </div>
         </aside>
