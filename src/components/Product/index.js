@@ -162,7 +162,11 @@ export default function Product({ product }) {
   })
 
   return products.map(product => (
-    <div key={generateKey(product.node.shopifyId)} className="product-item">
+    <Link
+      to={`/produto/${product.node.handle}`}
+      key={generateKey(product.node.shopifyId)}
+      className="product-item"
+    >
       <Img
         fluid={product.node.images[0].localFile.childImageSharp.fluid}
         alt="An image apresentation of current product"
@@ -178,6 +182,6 @@ export default function Product({ product }) {
         </div>
         <Link to={`/produto/${product.node.handle}`}>Ver Produto</Link>
       </div>
-    </div>
+    </Link>
   ))
 }
