@@ -1,0 +1,44 @@
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(196, 196, 196, 0.19);
+  z-index: 1;
+}
+
+header .header-menu {
+  height: 60px;
+  display: flex;
+  padding: 0 2vw;
+  justify-content: space-between;
+}
+
+header .header-menu .security-words {
+  display: flex;
+  align-items: center;
+}
+
+header .header-menu .security-words svg {
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  header .header-menu .security-words svg {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 880px) {
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  header .header-menu {
+    display: flex;
+    height: 80px;
+    background: rgba(196, 196, 196, 0.19);
+    padding: 0 2vw;
+    justify-content: space-between;
+  }
+}
