@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from '../../components/Seo'
@@ -17,12 +17,26 @@ const ProductPage = ({ data }) => {
     product.priceRange.minVariantPrice.amount
   )
 
+  const [currentImage, setCurrentImage] = useState(
+    product.images[0].localFile.childImageSharp.fluid
+  )
+
   const imgs = product.images
 
+  function handleChangeImages(image) {
+    setCurrentImage(image)
+  }
+
+  const productDescripton = (
+    <div id="" className="">
+      {product.descriptionHtml}
+    </div>
+  )
+
+  console.log(product)
   return (
     <>
       <SEO title={product.title} description={product.description} />
-
       <div
         className="intro-projects"
         data-sal="slide-up"
@@ -32,6 +46,28 @@ const ProductPage = ({ data }) => {
       >
         <section>
           <div className="img-main">
+            <Img
+              fluid={currentImage}
+              alt="An image apresentation of current product"
+              id="current"
+            />
+          </div>
+          <div className="imgs-body">
+            {imgs.map(img => (
+              <div
+                key={img.id}
+                onClick={() =>
+                  handleChangeImages(img.localFile.childImageSharp.fluid)
+                }
+              >
+                <Img
+                  fluid={img.localFile.childImageSharp.fluid}
+                  alt="An image apresentation of current product"
+                />
+              </div>
+            ))}
+          </div>
+          {/* <div className="img-main">
             <Img
               fluid={product.images[0].localFile.childImageSharp.fluid}
               alt="An image apresentation of current product"
@@ -45,14 +81,16 @@ const ProductPage = ({ data }) => {
                 alt="An image apresentation of current product"
               />
             ))}
-          </div>
+          </div> */}
         </section>
         <aside>
           <div className="description">
             <h1>{product.title}</h1>
             <h3>{value}</h3>
             <h4>Descrição do Produto</h4>
-            <p>{product.description}</p>
+            <div
+              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+            />
             <ProductForm product={product} />
           </div>
         </aside>

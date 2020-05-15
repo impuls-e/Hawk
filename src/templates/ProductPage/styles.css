@@ -23,17 +23,25 @@
   height: 100%;
 }
 .intro-projects section .imgs-body {
-  height: 20vh;
   display: flex;
   max-height: 150px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2vh;
 }
-.intro-projects section .imgs-body .gatsby-image-wrapper {
-  width: 32%;
-  height: 100%;
+
+.intro-projects section .imgs-body div {
+  width: 100%;
+  height: 25%;
   margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-projects section .imgs-body div .gatsby-image-wrapper {
+  margin: 0;
+  height: 100%;
+  width: 70%;
 }
 .intro-projects section .imgs-body img {
   height: 100%;
