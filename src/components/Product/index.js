@@ -28,7 +28,7 @@ export default function Product({ product }) {
               localFile {
                 childImageSharp {
                   fluid {
-                    src
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
@@ -64,7 +64,7 @@ export default function Product({ product }) {
               localFile {
                 childImageSharp {
                   fluid {
-                    src
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
@@ -100,7 +100,7 @@ export default function Product({ product }) {
               localFile {
                 childImageSharp {
                   fluid {
-                    src
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
@@ -136,7 +136,7 @@ export default function Product({ product }) {
               localFile {
                 childImageSharp {
                   fluid {
-                    src
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
