@@ -7,8 +7,8 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Hawk`,
-    titleTemplate: 'Hawk · **SLOGAN**',
-    description: `**Company-Description**`,
+    titleTemplate: 'Hawk · H ⴷ W K',
+    description: `Uma grife que se expressa artísticamente através da objetividade do minimalismo. A HAWK traz consigo, um estilo de vida movido pela independência, liberdade e vigor.`,
     siteUrl: `https://hawk.art.br`,
     social: {
       twitter: `hawk`,
