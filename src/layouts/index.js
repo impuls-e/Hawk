@@ -6,6 +6,7 @@ import ContextProvider from '~/provider/ContextProvider'
 
 import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
+import NavigationCart from '~/components/NavigationCart'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 import FloatWhatsapp from '../components/FloatWhatsapp'
@@ -13,6 +14,8 @@ import FloatWhatsapp from '../components/FloatWhatsapp'
 import './styles.css'
 
 const Layout = ({ children }) => {
+  const actualPath = children.props.path
+
   return (
     <ContextProvider>
       <GlobalStyle />
@@ -26,15 +29,18 @@ const Layout = ({ children }) => {
             }
           }
         `}
-        render={data => (
-          <>
-            <Navigation siteTitle={data.site.siteMetadata.title} />
+        render={(data) => (
+          <React.Fragment>
+            {actualPath !== '/cart/' ? (
+              <Navigation siteTitle={data.site.siteMetadata.title} />
+            ) : (
+              <NavigationCart />
+            )}
             <main>{children}</main>
-            <Newsletter />
+            {actualPath !== '/cart/' ? <Newsletter /> : null}
             <Footer />
-            <FloatWhatsapp/>
-
-          </>
+            <FloatWhatsapp />
+          </React.Fragment>
         )}
       />
     </ContextProvider>
@@ -42,7 +48,7 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
