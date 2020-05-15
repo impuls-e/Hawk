@@ -1,21 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'
 
-import StoreContext from '~/context/StoreContext';
-import LineItem from './LineItem';
-import './styles.css';
-import { MdSecurity } from 'react-icons/md';
+import StoreContext from '~/context/StoreContext'
+import LineItem from './LineItem'
+import './styles.css'
+import { MdSecurity } from 'react-icons/md'
 
 const Cart = () => {
-  const { store: { checkout } } = useContext(StoreContext);
+  const {
+    store: { checkout },
+  } = useContext(StoreContext)
 
   const handleCheckout = () => {
-    window.open(checkout.webUrl);
-  };
+    window.open(checkout.webUrl)
+  }
 
-  const line_items = checkout.lineItems.map((line_item) => {
-    console.log(line_item);
-    return <LineItem key={line_item.id.toString()} line_item={line_item} />;
-  });
+  const line_items = checkout.lineItems.map(line_item => {
+    console.log(line_item)
+    return <LineItem key={line_item.id.toString()} line_item={line_item} />
+  })
 
   return (
     <React.Fragment>
@@ -47,14 +49,17 @@ const Cart = () => {
           <p className="cart-value-total">Total: R$ {checkout.totalPrice}</p>
         </div>
         <div>
-          <button onClick={handleCheckout} disabled={checkout.lineItems.length === 0}>
+          <button
+            onClick={handleCheckout}
+            disabled={checkout.lineItems.length === 0}
+          >
             Fechar pedido
             <MdSecurity />
           </button>
         </div>
       </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart

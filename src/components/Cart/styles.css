@@ -11,19 +11,20 @@
   display: grid;
   border-collapse: collapse;
   min-width: 100%;
-  grid-template-columns: minmax(90px, 1.5fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr)
+  grid-template-columns:
+    minmax(90px, 1.5fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr)
     minmax(50px, 1fr) minmax(50px, 1fr);
   row-gap: 5px;
 }
 
 .cart-products table thead,
-tbody,
-tr {
+.cart-products table tbody,
+.cart-products table tbody tr {
   display: contents;
 }
 
 .cart-products th,
-td {
+.cart-products td {
   display: flex;
   align-items: center;
   justify-content: center;
