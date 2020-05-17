@@ -65,15 +65,20 @@ const SEO = ({ lang, pathname }) => {
       {seo.image && (
         <meta
           property="og:image"
-          content="https://hawk.art.br/static/footerLogo-49dfcb74569b400adbca9ef29b6306c3.svg"
+          content="https://www.kindpng.com/picc/m/155-1552507_bald-eagle-silhouette-hawk-clip-art-hawk-silhouette.png"
           property="og:image:width"
-          content="130"
+          content="200"
           property="og:image:height"
-          content="22"
+          content="200"
         />
       )}
 
-      {seo.image && <meta property="og:image:url" content={seo.image} />}
+      {seo.image && (
+        <meta
+          property="og:image:url"
+          content="https://www.kindpng.com/picc/m/155-1552507_bald-eagle-silhouette-hawk-clip-art-hawk-silhouette.png"
+        />
+      )}
 
       {seo.image && <meta property="og:image:type" content="image/png" />}
       <meta name="twitter:card" content="summary_large_image" />
