@@ -4,7 +4,7 @@ import './styles.css'
 import Img from 'gatsby-image'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 export default function Product({ product }) {
-  const generateKey = pre => {
+  const generateKey = (pre) => {
     return `${pre}_${new Date().getTime()}`
   }
   const data = useStaticQuery(graphql`
@@ -81,9 +81,9 @@ export default function Product({ product }) {
           }
         }
       }
-      short: allShopifyProduct(
+      moletom: allShopifyProduct(
         sort: { fields: [title] }
-        filter: { productType: { eq: "short" } }
+        filter: { productType: { eq: "moletom" } }
       ) {
         edges {
           node {
@@ -158,10 +158,10 @@ export default function Product({ product }) {
   const products = data[product].edges
   const formattedNumber = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
-    currency: 'BRL',
+    currency: 'BRL'
   })
 
-  return products.map(product => (
+  return products.map((product) => (
     <Link
       to={`/produto/${product.node.handle}`}
       key={generateKey(product.node.shopifyId)}
@@ -174,11 +174,7 @@ export default function Product({ product }) {
       <div className="info-item">
         <div className="info-text">
           <h4>{product.node.title}</h4>
-          <p>
-            {formattedNumber.format(
-              product.node.priceRange.minVariantPrice.amount
-            )}
-          </p>
+          <p>{formattedNumber.format(product.node.priceRange.minVariantPrice.amount)}</p>
         </div>
         <Link to={`/produto/${product.node.handle}`}>Ver Produto</Link>
       </div>
