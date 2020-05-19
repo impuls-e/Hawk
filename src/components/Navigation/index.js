@@ -31,19 +31,19 @@ const Navigation = () => {
       },
       {
         id: 2,
-        path: '/shorts',
-        text: 'shorts'
+        path: '/moletons',
+        text: 'moletons'
       },
       {
         id: 3,
         path: '/calcas',
         text: 'calças'
-      },
-      {
-        id: 4,
-        path: '/acessorios',
-        text: 'acessórios'
       }
+      // {
+      //   id: 4,
+      //   path: '/acessorios',
+      //   text: 'acessórios'
+      // }
     ]
   }
   function handleMenu() {
