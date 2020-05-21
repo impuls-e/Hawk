@@ -22,14 +22,14 @@
   margin-bottom: 1vh;
 }
 .product-item .info-item .info-text h4 {
-  font-weight: 600;
+  font-weight: 7;
   margin-bottom: 1vh;
 
   text-transform: uppercase;
 }
 .product-item .info-item .info-text p {
   margin-bottom: 1vh;
-  font-weight: 600;
+  font-weight: 700;
 }
 .product-item .info-item a {
   display: flex;
@@ -41,7 +41,7 @@
   font-size: 2rem;
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 @media (min-width: 1100px) {
   .product-item {
