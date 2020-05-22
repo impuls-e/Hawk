@@ -45,6 +45,13 @@ export const Container = styled.div`
     color: #fff;
     margin-bottom: 2vh;
   }
+  .payments {
+    svg {
+      width: 50px;
+      height: 30px;
+    }
+  }
+
   div {
     display: flex;
     justify-content: center;
