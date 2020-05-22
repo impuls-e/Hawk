@@ -29,7 +29,7 @@ export const Buttons = styled.div`
     font-size: 2rem;
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     flex: 1;
 
