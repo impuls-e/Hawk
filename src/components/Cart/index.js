@@ -18,7 +18,7 @@ const Cart = () => {
     console.log(line_item)
     return <LineItem key={line_item.id.toString()} line_item={line_item} />
   })
-
+  console.log(line_items)
   return (
     <React.Fragment>
       <div className="cart-products">
@@ -26,11 +26,10 @@ const Cart = () => {
           <thead>
             <tr>
               <th>Produto</th>
-              <th>Entrega</th>
               <th>Preço</th>
               <th>Quantidade</th>
               <th>Total</th>
-              <th />
+              <th></th>
             </tr>
           </thead>
           <tbody>{line_items}</tbody>
@@ -42,9 +41,6 @@ const Cart = () => {
           <p>Subtotal: R$ {checkout.subtotalPrice}</p>
         </div>
 
-        <div>
-          <p>Entrega: R$ {checkout.totalTax}</p>
-        </div>
         <div>
           <p className="cart-value-total">Total: R$ {checkout.totalPrice}</p>
         </div>

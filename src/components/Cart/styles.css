@@ -8,19 +8,42 @@
 }
 
 .cart-products table {
-  display: grid;
-  border-collapse: collapse;
-  min-width: 100%;
-  grid-template-columns:
-    minmax(90px, 1.5fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr)
-    minmax(50px, 1fr) minmax(50px, 1fr);
-  row-gap: 5px;
+  display: flex;
+  flex-direction: column;
 }
-
-.cart-products table thead,
-.cart-products table tbody,
+.cart-products table thead {
+  margin: 2vh 0;
+}
+.cart-products table thead tr {
+  display: flex;
+}
+.cart-products table thead tr th {
+  width: 20%;
+}
+.cart-products table thead tr th:nth-child(5),
+.cart-products table thead tr th:nth-child(6) {
+  width: 10%;
+}
+.cart-products table tbody {
+  display: flex;
+  flex-direction: column;
+}
 .cart-products table tbody tr {
-  display: contents;
+  display: flex;
+  margin: 2vh 0;
+}
+.cart-products table tbody tr td {
+  width: 20%;
+}
+.cart-products table tbody tr td:nth-child(5) {
+  width: 10%;
+}
+.cart-products table tbody tr td:nth-child(6) {
+  width: 10%;
+}
+.cart-products table tbody tr td .product-cell a {
+  color: #000;
+  margin-top: 1vh;
 }
 
 .cart-products th,
@@ -70,7 +93,7 @@
   font-size: 2rem;
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   flex: 1;
   border: none;

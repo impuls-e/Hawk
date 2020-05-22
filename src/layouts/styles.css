@@ -1,13 +1,13 @@
 @import './reset.css';
 @font-face {
-  font-family: 'Archivo-Regular';
-  src: url('../fonts/Archivo-Regular.ttf');
+  font-family: 'Karla';
+  src: url('../fonts/Karla-Bold.ttf');
 }
 *,
 html,
 body,
 button {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Karla', sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
