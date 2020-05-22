@@ -10,10 +10,6 @@
 }
 
 @media (min-width: 768px) {
-  .product-cell {
-    flex-direction: row;
-  }
-
   .product-cell img {
     margin-bottom: 0px;
   }
