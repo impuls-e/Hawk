@@ -1,0 +1,63 @@
+{
+  "faq": {
+    "politica_de_privacidade": {
+      "id": 1,
+      "titulo": "POLÍTICA DE PRIVACIDADE",
+      "conteudo": "<p> A política de privacidade tem como objetivo deixar claro o compromisso da loja online Hawk Clothing em garantir a proteção dos dados solicitados em nossa loja e esclarecer sobre o uso dessas informações. A Hawk Clothing está comprometida com seus clientes e visa proporcionar uma melhor experiência de navegação. Ao visitar www.hawk.art.br, você aceita as práticas descritas nesta política de privacidade.</p> <p> As informações do seu cadastro são armazenadas em ambiente seguro e de acesso exclusivo da Hawk Clothing e seus dados cadastrais não serão divulgados para terceiros, mantendo ao máximo a sua privacidade. As transações com cartões de crédito são feitas diretamente com os servidores das administradoras das mesmas, garantindo total segurança em suas compras.</p> <p> Com a constante evolução do modelo de negócio, a Hawk Clothing reserva-se o direito de alterar esta política de privacidade a qualquer momento, mediante publicação da versão atualizada no endereço www.hawk.art.br</p>"
+    },
+    "operacao": {
+      "id": 2,
+      "titulo": "OPERAÇÃO",
+      "conteudo": [
+        {
+          "pergunta": "Os itens são originais?",
+          "resposta": "Sim. Somos uma plataforma que vende roupas originais e exclusivas da marca Hawk."
+        },
+        {
+          "pergunta": "Como funciona?",
+          "resposta": "É só navegar pelo site e escolher o item (ou os itens) que deseja comprar, confirmar a compra no carrinho e pronto!"
+        },
+        {
+          "pergunta": "Recebi o meu produto e gostaria de trocar. Como eu faço?",
+          "resposta": "Só precisa nos informar assim que receber que gostaria de trocar e, caso já saiba, por qual item."
+        }
+      ]
+    },
+    "logistica": {
+      "id": 3,
+      "titulo": "LOGÍSTICA",
+      "conteudo": [
+        {
+          "pergunta": "É garantido que vou receber meu pedido na data que escolhi?",
+          "resposta": "Sim! Nós sempre sugerimos colocar de 1 a 2 dias antes da data do evento ou viagem. Pode deixar que a logística é com a gente!"
+        },
+        {
+          "pergunta": "Como os produtos são enviados?",
+          "resposta": "Nós trabalhamos com operadores logísticos aéreos e terrestres. Ao enviar o produto, você irá receber o código de rastreamento para acompanhar a chegada do seu pedido."
+        },
+        {
+          "pergunta": "A que horas vocês vão entregar meu pedido?",
+          "resposta": "Todas as nossas entregas acontecem em horário comercial, de 9:00 as 19:00."
+        },
+        {
+          "pergunta": "Qual o valor do frete?",
+          "resposta": "Nosso frete varia entre 20 e 37 reais."
+        },
+        {
+          "pergunta": "O meu produto deveria ter chegado hoje e não chegou. O que fazer?",
+          "resposta": "Alguns fatores poderão afetar o tempo de entrega estimado, como greve dos Correios, deslizamentos, interrupções de trânsito etc."
+        }
+      ]
+    },
+    "financeiro": {
+      "id": 4,
+      "titulo": "FINANCEIRO",
+      "conteudo": [
+        {
+          "pergunta": "Como é feito o pagamento na plataforma?",
+          "resposta": "Todos os pagamentos são realizados via cartão de crédito e você pode parcelar em até 6x sem juros."
+        }
+      ]
+    }
+  }
+}
