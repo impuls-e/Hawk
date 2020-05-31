@@ -43,13 +43,7 @@ export default function Hero() {
         url="https://hawk.art.br"
         sameAs={['https://instagram.com/hawk.br']}
       />
-      <div
-        className="hero"
-        data-sal="slide-up"
-        data-sal-delay="200"
-        data-sal-easing="ease"
-        data-sal-duration="1000"
-      >
+      <div className="hero">
         <BackgroundImage
           Tag="section"
           className="background"
