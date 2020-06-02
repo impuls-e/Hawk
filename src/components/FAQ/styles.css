@@ -1,0 +1,54 @@
+.faq {
+  padding: 98px 2vw 0;
+}
+.faq .content-subject {
+  margin-bottom: 30px;
+}
+
+.faq .content-subject h4 {
+  margin-bottom: 15px;
+}
+
+.faq .content-subject .politics-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.faq .content-subject li div p {
+  padding: 0 15px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  background: #f4f2ea;
+  color: #656565;
+  width: fit-content;
+}
+
+.faq h3 {
+  margin: 30px 0;
+}
+
+.faq li {
+  line-height: 3rem;
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.faq .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.faq .question-area:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.answer-area {
+  display: none;
+}
+
+@media (min-width: 880px) {
+  .faq {
+    padding-top: 80px;
+  }
+}

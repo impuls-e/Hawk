@@ -24,29 +24,20 @@ export default function Footer() {
       >
         <h4>CONTATO</h4>
         <div>
-          <a
-            title="Enviar um whatsapp para a Hawk"
-            href="https://wa.me/5548988394527"
-          >
+          <a title="Enviar um whatsapp para a Hawk" href="https://wa.me/5548988394527">
             <FaWhatsapp size={24} />
           </a>
 
-          <a
-            title="Vai para o instagram da Hawk"
-            href="https://www.instagram.com/hawk.br/"
-          >
+          <a title="Vai para o instagram da Hawk" href="https://www.instagram.com/hawk.br/">
             <FaInstagram size={24} />
           </a>
-          <a
-            title="Enviar um e-mail para a Hawk"
-            href="mailto:muricristiano@gmail.com"
-          >
+          <a title="Enviar um e-mail para a Hawk" href="mailto:muricristiano@gmail.com">
             <MdMailOutline size={24} />
           </a>
         </div>
       </Container>
       <Container>
-        <Link title="Vai para a página de politica e privacidades" to="#">
+        <Link title="Vai para a página de politica e privacidades" to="/faq">
           <h4>Politica&Privacidades</h4>
         </Link>
         <h4>FORMAS DE PAGAMENTO</h4>
