@@ -46,7 +46,7 @@ const Cart = () => {
         </div>
         <div>
           <button
-            onClick={handleCheckout}
+            // onClick={handleCheckout}
             disabled={checkout.lineItems.length === 0}
           >
             Fechar pedido
