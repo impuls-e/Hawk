@@ -41,7 +41,7 @@
     "react-helmet": "^6.0.0",
     "react-helmet-async": "^1.0.6",
     "react-icons": "^3.10.0",
-    "set-value": "^2.0.1",
+    "set-value": "^4.0.1",
     "shopify-buy": "^2.8.0",
     "styled-components": "^5.1.0"
   },
